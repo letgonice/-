@@ -1,13 +1,29 @@
 {
   "pages":[
+    "pages/home/home",
+    "pages/coupon/coupon",
+    "pages/order/order",
+    "pages/my/my",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#4e148c",
+    "navigationBarTitleText": "斑马物流",
+    "navigationBarTextStyle":"white"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
+  "tabBar": {
+    "selectedColor": "#4c168e",
+    "list": [
+      {"pagePath": "pages/home/home","text": "首页","iconPath": "/assets/image/tabBarIcon/home.png","selectedIconPath": "/assets/image/tabBarIcon/home-select.png"},
+      {"pagePath": "pages/coupon/coupon","text": "优惠券","iconPath": "/assets/image/tabBarIcon/coupon.png","selectedIconPath": "/assets/image/tabBarIcon/coupon-select.png"},
+      {"pagePath": "pages/order/order","text": "订单信息","iconPath": "/assets/image/tabBarIcon/order.png","selectedIconPath": "/assets/image/tabBarIcon/order-select.png"},
+      {"pagePath": "pages/my/my","text": "我的","iconPath": "/assets/image/tabBarIcon/my.png","selectedIconPath": "/assets/image/tabBarIcon/my-select.png"}
+    ]
+  }
 }
