@@ -1,0 +1,235 @@
+/* pages/home/home.wxss */
+.home{
+  background-color: #f7f6f6;
+  height: 100vh;
+}
+.banner {
+  width: 750rpx;
+  /* height:564rpx; */
+  background-color: #4e148c;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 354px;
+  height: 156px;
+  margin: 0 auto;
+  margin-top: 94rpx;
+  padding-bottom: 42rpx;
+}
+
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.semicircle {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 220rpx;
+  background-color: #4e148c;
+  border-bottom-right-radius: 250rpx;
+  border-bottom-left-radius: 250rpx;
+}
+
+.nationbox {
+  position: absolute;
+  top: 0rpx;
+  width: 624rpx;
+  height: 386rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  padding: 0 64rpx;
+  box-sizing: border-box;
+  box-shadow: 10rpx 10rpx 30rpx rgba(0, 0, 0, 0.4);
+  font-size: 56rpx;
+}
+.nation{
+  padding-top: 102rpx;
+  display: flex;
+}
+
+.nation image{
+  display: flex;
+  align-items: center;
+  width: 92rpx;
+  height: 92rpx;
+}
+
+.toTransferPage{
+  margin-top: 66rpx;
+  text-align: center;
+}
+
+.toTransferPage .van-button{
+  width: 324rpx;
+  height: 76rpx;
+  background-color: #4e148c;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+}
+
+.relation{
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 714rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background-color: #ff6600;
+}
+
+.relation .serviceImg image{
+  width: 108rpx;
+  height: 108rpx;
+  margin-bottom: -6rpx;
+  margin-left: -2rpx;
+}
+
+.relation .relationText{
+    position: absolute;
+    left: 140rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.relation .relationText .storng{
+  font-size: 32rpx;
+  color: white;
+}
+
+.relation .relationText .text{
+    font-size: 24rpx;
+    color:#9CE2E2E2;
+}
+
+.relation .right image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54rpx;
+  height: 54rpx;
+  margin-right: 28rpx;
+}
+
+.costAndDeal {
+  box-sizing: border-box;
+  width: 714rpx;
+  margin: 36rpx auto;
+}
+
+.costAndDeal .public{
+  box-sizing: border-box;
+  margin:0 4rpx;
+  width: 324rpx;
+  height: 324rpx;
+  padding-left: 30rpx;
+  background-color: #9877bb;
+  border-radius: 20rpx;
+  box-shadow:  10rpx 10rpx 50rpx rgba(0, 0, 0, 0.6);
+}
+.costAndDeal .img{
+    padding:8px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.costAndDeal .cost .img{
+  top: -40rpx;
+}
+
+.costAndDeal .deal{
+  background-color: #fc9d62;
+}
+
+.costAndDeal  .public .right image{
+    width: 42rpx;
+    height: 42rpx;
+ }
+.costAndDeal  .public .text{
+    font-size: 28rpx;
+  }
+  .costAndDeal  .public .title{
+    font-size: 56rpx;
+    padding-top: 34rpx;
+    padding-bottom: 14rpx;
+    font-weight: 700;
+ }
+ .costAndDeal .cost{
+   color: white;
+ }
+ .costAndDeal .deal{
+   color: #E7691D;
+ }
+ .costAndDeal  .public .car image{
+    width: 178rpx;
+    height: 178rpx;
+ }
+ .costAndDeal  .deal .price{
+   width: 128rpx;
+   height: 128rpx;
+  }
+  .costAndDeal  .public image{
+     width: 100%;
+     height: 100%;
+  }
+  .costAndDeal  .public .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58rpx;
+    height: 58rpx;
+    border-radius: 58rpx;
+  }
+  .costAndDeal  .cost .right{
+    background-color: #4e148c;
+  }
+  .costAndDeal  .deal .right{
+    background-color: #ff6200;
+  }
+
+
+  .flowChart{
+    /* width: 714rpx; */
+    margin: 0 auto;
+  }
+  .flowChart .flowChartImg{
+    width: 750rpx;
+    height: 218rpx;
+  }
+  .flowChart .flowChartImg image{
+    width: 100%;
+    height: 100%;
+  }
+  .flowChart .flowChartTitle{
+      padding: 0 36rpx;
+      font-size: 56rpx;
+  }
+
+  .copyAddress{
+    width: 716rpx;
+    margin: 0 auto;
+    padding-top: 94rpx;
+  }
+  .copyAddress .van-button{
+    width: 100%;
+    background-color: #4c168e;
+    color:white ;
+    font-size: 32rpx;
+  }
+  .copyAddress .copyAddressText{
+      text-align: center;
+      font-size: 28rpx;
+      margin-bottom: 160rpx;
+      color: #4C168E;
+  }
+
+
+
+
+

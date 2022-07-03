@@ -1,0 +1,82 @@
+<view class="home">
+  <view class="banner">
+    <swiper indicator-dots autoplay interval="{{2000}}" circular class="swiper" indicator-color="#333333" indicator-active-color="#dddddd">
+      <swiper-item>
+        <image src="../../assets/image/swiper/@1x轮播图.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../assets/image/swiper/@1x轮播图.png"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="semicircle">
+    <view class="nationbox">
+      <view class="nation flex-xbt-ycenter">
+        <text>中国</text>
+        <view class="imgs">
+          <image src="../../assets/image/飞机.png"></image>
+        </view>
+        <text>美国</text>
+      </view>
+      <view class="toTransferPage">
+        <van-button>立即转运</van-button>
+      </view>
+    </view>
+  </view>
+
+  <view style="margin-top:200rpx;" class="relation">
+    <view class="serviceImg">
+      <image src="../../assets/image/联系斑马.png"></image>
+    </view>
+    <view class="relationText">
+      <text class="storng">联系河马</text>
+      <text class="text">为你解决下单疑问？</text>
+    </view>
+    <view class="right">
+      <image src="../../assets/image/icon/right.png"></image>
+    </view>
+  </view>
+
+  <view class="costAndDeal flex-xbt-ycenter">
+    <view class="cost public">
+      <view class="title">转运须知</view>
+      <text class="text">流程和注意事项</text>
+      <view class="img">
+        <view class="right">
+          <image src="../../assets/image/icon/right.png"></image>
+        </view>
+        <view class="car">
+          <image src="../../assets/image/icon/货车.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="deal public">
+      <view class="title">转运须知</view>
+      <text class="text">流程和注意事项</text>
+      <view class="img">
+        <view class="right">
+          <image src="../../assets/image/icon/right.png"></image>
+        </view>
+        <view class="price">
+          <image src="../../assets/image/icon/计算器.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="flowChart">
+        <view class="flowChartTitle">轻松转运</view>
+        <view class="flowChartImg"> 
+          <image src="../../assets/image/流程图.png"></image>
+        </view>
+  </view>
+
+<view class="copyAddress">
+  <van-button round>复制仓库地址去购物</van-button>
+  <view class="copyAddressText">电商平台的收货地址请填写我们</view>
+</view>
+
+
+
+
+</view>
