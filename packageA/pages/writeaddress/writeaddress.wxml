@@ -1,0 +1,48 @@
+<!--packageA/pages/writeaddress/writeaddress.wxml-->
+<view class="writeaddress">
+  <view class="storeAddress">
+    <view class="addressName">
+      <van-icon name="location-o" class="addressIcon" size="40rpx" />
+      仓库地址
+    </view>
+    <view class="addressInfo">
+      <view class="storeName">
+        河马仓库
+        <view class="phone">13331444121 <view class="copy">复制</view>
+        </view>
+      </view>
+      <view class="address">
+        深圳市龙华区龙华街道工业路壹城环智中心C座2607室
+      </view>
+    </view>
+  </view>
+
+  <view class="nationMsg">
+    <view class="msgTop">
+      <view class="title">目标国收件信息</view>
+      <view class="warnText">
+        <image class="warnimg" src="../../../assets/image/icon/warn.png"></image>
+        请用英文填写
+      </view>
+      <van-button plain size="mini" type="primary">选择地址</van-button>
+    </view>
+    <view class="fromData">
+      <van-cell-group>
+        <van-field value="{{ nationMsg.name }}"  clearable label="Name:" placeholder="Please fill in the recipient‘s name"  border="{{false}}" bind:blur="blueText" />
+
+        <van-field value="{{ nationMsg.phone }}" label="Phone:" placeholder="Please fill in the recipient‘s phone"  border="{{ false }}" />
+
+
+        <van-field value="{{ nationMsg.address }}" type="password" label="Address:" placeholder="Please fill in the address"  border="{{ false }}" />
+
+        <van-field value="{{ nationMsg.city }}" type="password" label="City:" placeholder="Please fill in the city"  border="{{ false }}" />
+        
+        <van-field value="{{ nationMsg.postcode }}" type="password" label="PostCode:" placeholder="Please fill in the postcode"  border="{{ false }}" />
+      </van-cell-group>
+    </view>
+  </view>
+    <view class="nowbtn">
+      <van-button plain>立即转运</van-button>
+    </view>
+
+</view>

@@ -5,12 +5,47 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    popup:{
+      show:false,
+      btnList:['普通货物','电子产品','液体粉末','内地EMS','广东EMS'],
+      index:"0",
+      // 可以换成需要的参数
+      name:'普通货物'
+    }
+  },
+  toCopyAddress(){
+    wx.navigateTo({
+      url: '/packageA/pages/warehouse/warehouse',
+    })
   },
 
+  selectGoods(e){
+    let index =  e.currentTarget.dataset.index
+    let name = e.currentTarget.dataset.name
+    console.log(name);
+    this.setData({
+      "popup.index":index,
+      "popup.name" :name
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
+  immediatelyBtn(){
+    this.setData({ 'popup.show': true });
+  },
+  onClose() {
+    this.setData({ 'popup.show': false });
+  },
+  quitBtn(){
+    this.setData({ 'popup.show': false });
+  },
+  next(){
+    wx.navigateTo({
+      url: `/packageA/pages/writeaddress/writeaddress?name=${this.data.popup.name}`,
+    })
+  },
+
   onLoad(options) {
 
   },

@@ -1,0 +1,96 @@
+/* packageA/pages/cost/cost.wxss */
+.costImg{
+  width: 100%;
+  height: 1132rpx;
+}
+.costImg image{
+  width: 100%;
+  height: 100%;
+}
+.contMatter{
+  padding-top: 46rpx;
+  width: 660rpx;
+  margin:0 auto;
+}
+.contMatter .title{
+    font-size: 36rpx;
+    font-weight: 600;
+}
+.contMatter  .contCompust{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+ 
+
+
+.contMatter  .contCompust .goodsStrong{
+  margin-bottom: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28rpx;
+  height: 172rpx;
+}
+
+.contMatter  .contCompust .goodsStrong .boxStyle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 308rpx;
+  height: 172rpx;
+  border-radius:28rpx;
+  border: 1px solid #bbbbbb;
+  box-shadow: 0 6rpx 14rpx 4rpx rgba(0, 0, 0, 0.4);
+  font-size: 32rpx;
+}
+.contMatter  .contCompust .goodsStrong .goods{
+  background-color: #89c3f6;
+  color:#0881ec;
+}
+.contMatter  .contCompust .goodsStrong .strong{
+  background-color: #89ec9c;
+  color: rgba(10, 172, 41, 100);
+}
+
+
+.contMatter .boxCompon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 172rpx;
+  border-radius: 28rpx;
+  box-shadow: 0 6rpx 14rpx 4rpx rgba(0, 0, 0, 0.4);
+  border: 1px solid #bbbbbb;
+  margin-bottom: 28rpx;
+}
+.contMatter  .contCompust .bulk{
+  background-color:#90aef6;
+  color: black;
+  font-size: 28rpx;
+}
+.contMatter  .contCompust .money{
+  background-color: #0b73f7;
+  color: white;
+}
+
+.strongInput .ipt{
+    display: flex;
+}
+.strongInput{
+  width: 600rpx;
+  height: 600rpx;
+}
+.strongInput .title{
+      position: relative;
+      text-align: center;
+      padding: 20rpx 0;
+      color: #666666;
+}
+.strongInput .title .quitStrong{
+position: absolute;
+right: 60rpx;
+color: #ab2e2e;
+}

@@ -3,9 +3,17 @@
     "pages/home/home",
     "pages/coupon/coupon",
     "pages/order/order",
-    "pages/my/my",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/my/my"
+  ],
+  "subPackages": [
+    {
+      "root":"packageA",
+      "pages": [
+        "pages/warehouse/warehouse",
+        "pages/cost/cost",
+        "pages/writeaddress/writeaddress"
+      ]
+    }
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -15,7 +23,14 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index"
   },
   "tabBar": {
     "selectedColor": "#4c168e",

@@ -1,0 +1,40 @@
+<!--pages/warehouse/warehouse.wxml-->
+<view class="warehouser">
+      <view class="addressTemplate">
+            <view class="addressName">
+                <van-icon name="location-o" class="addressIcon" size="40rpx" />
+                仓库地址
+            </view>
+            <view class="address">
+                <view class="addressee" wx:for="{{addressList}}" wx:key="id">
+                    <text class="message">{{item.name}}</text>
+                    <text class="msgText tellipsis_2">{{item.msg}}</text>
+                </view>
+            </view>
+      </view>
+      <view class="copyAddress">
+          <van-button type="info" round  block class="copyAddressbtn" bindtap="copyAddressbtn">一键复制仓库地址</van-button>
+      </view>
+      <view class="flow">
+            <view class="step">
+                  <view class="stepbuz">第一步将包裹寄到河马转运仓</view>
+                  <text class="stepText">复制以上收件人信息并添加到淘宝等网购平台，以河马转运为收货人ID号作为包裹识别归属的主要途径，请务必作为收件人信息的一部分完整保留;
+                  </text>
+            </view>
+            <view class="step">
+                  <view class="stepbuz">第二步报备包裹国内快递单号</view>
+                  <text class="stepText">  快递寄出后将国内快递单号添加至河马转运，因国内部分快递公司会隐藏ID号，请自主添加单号备，以免被识别为无名包事造成不必要的损失:
+                  </text>
+            </view>
+            <view class="step">
+                  <view class="stepbuz">第三步提交打包</view>
+                  <text class="stepText">包裹入库验货后，选择你要寄送的包事提交打包并选择线路渠道，打包时间通常为当天提交次日18:00前完成打包;
+                  </text>
+            </view>
+            <view class="step">
+                  <view class="stepbuz">第三步提交打包</view>
+                  <text class="stepText">打包完成后确认重量与运费明细，完成支付后当日出库提交转运
+                  </text>
+            </view>
+      </view>
+</view>
