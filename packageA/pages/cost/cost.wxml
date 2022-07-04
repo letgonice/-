@@ -1,0 +1,47 @@
+<!--packageA/pages/cost/cost.wxml-->
+<view class="cost">
+  <view class="costImg">
+    <image src="/assets/image/cost.png"></image>
+  </view>
+  <view class="contMatter">
+    <view class="title"></view>
+    <view class="contCompust">
+      <view class="goodsStrong">
+        <view class="goods boxStyle">
+          <view>转运货物</view>
+          <view>普通货物</view>
+        </view>
+        <view class="strong boxStyle" bindtap="strongBtn">
+          <view>预估重量</view>
+          <view>请输入重量</view>
+        </view>
+      </view>
+      <view class="bulk boxCompon">
+        预计体积
+        <text>请输入长宽高</text>
+      </view>
+      <view class="money boxCompon">
+        预估运费（实际结果以订单为准）<text>¥ 0.00</text>
+      </view>
+    </view>
+  </view>
+
+  <van-popup show="{{ show }}" bind:close="onClose" round>
+    <view class="strongInput">
+    <view class="title">请输入重量与长宽高 <van-icon name="cross" bindtap="onClose" class="quitStrong" /></view>
+      <label class="ipt">
+            <text>重量(KG):</text><input type="number" value="{{strongInput.strong}}"/>
+      </label>
+      <label class="ipt">
+            <text>重量(KG):</text><input type="number" value="{{strongInput.strong}}"/>
+      </label>
+      <label class="ipt">
+            <text>重量(KG):</text><input type="number" value="{{strongInput.strong}}"/>
+      </label>
+      <label class="ipt">
+            <text>重量(KG):</text><input type="number" value="{{strongInput.strong}}"/>
+      </label>
+    </view>
+  </van-popup>
+
+</view>

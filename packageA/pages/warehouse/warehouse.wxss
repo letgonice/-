@@ -1,0 +1,70 @@
+/* pages/warehouse/warehouse.wxss */
+.warehouser{
+  width: 694rpx;
+  margin: 0 auto;
+}
+.addressIcon{
+  width: 52rpx;
+  height: 52rpx;
+  background-color:#ffa726;
+  border-radius: 52rpx;
+  color: white;
+}
+.addressTemplate{
+  margin-top:52rpx;
+  width: 694rpx;
+  height: 458rpx;
+  box-shadow:6rpx 4rpx 30rpx rgba(0,0,0,0.2) ;
+}
+.addressTemplate .addressName{
+  padding-top: 28rpx;
+  margin-left: 50rpx;
+  font-size: 40rpx;
+}
+.addressTemplate .address{
+  box-sizing: border-box;
+  margin-left: 76rpx;
+  padding:32rpx 52rpx 32rpx 0;
+}
+.addressTemplate .address .addressee{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 32rpx;
+    font-size: 32rpx;
+}
+.addressTemplate .address .addressee .message{
+    display: flex;
+    justify-content:flex-end;
+    width: 180rpx;
+    padding-right: 20rpx;
+    font-size: 34rpx;
+}
+.addressTemplate .address .addressee .msgText{
+  width: 360rpx;
+}
+.copyAddress{
+  padding-top:58rpx;
+  margin: 0 auto;
+  width: 660rpx;
+}
+.copyAddress .van-button{
+  height: 80rpx;
+  font-size: 32rpx;
+}
+
+.flow{
+  padding-top: 40rpx;
+}
+.flow .step {
+  padding-bottom: 70rpx;
+}
+.flow .step .stepbuz{
+  font-size: 40rpx;
+  padding-bottom: 16rpx;
+  font-weight: 600;
+}
+.flow .step .stepText{
+  display: flex;
+  text-indent: 70rpx;
+  font-size: 36rpx;
+}

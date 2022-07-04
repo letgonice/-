@@ -1,0 +1,115 @@
+/* packageA/pages/writeaddress/writeaddress.wxss */
+.writeaddress{
+  width:694rpx;
+  margin:0 auto;
+}
+.storeAddress{
+  margin-top: 66rpx;
+  height: 270rpx;
+  box-shadow: 0 4rpx 20rpx 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10rpx;
+}
+.storeAddress .addressIcon{
+  width: 52rpx;
+  height: 52rpx;
+  background-color: #4e148c;
+  border-radius: 52rpx;
+  color: white;
+  margin-right: 20rpx;
+}
+
+.storeAddress .addressName{
+  display: flex;
+  align-items: center;
+  padding-top: 28rpx;
+  margin-left: 50rpx;
+  font-size: 32rpx;
+}
+.addressInfo{
+  display: flex;
+  flex-direction: column;
+  padding-left: 94rpx;
+  padding-top:20rpx;
+}
+.addressInfo .storeName{
+  display: flex;
+  font-size: 30rpx;
+}
+.storeName  .phone{
+  display: flex;
+  align-items: center;
+  padding-left: 40rpx;
+}
+.storeName  .copy{
+  font-size: 20rpx;
+  color: #40B850;
+  margin-left: 16rpx;
+  background-color:#d9f1dd;
+}
+.addressInfo .address{
+  width: 566rpx;
+  font-size: 24rpx;
+  padding-top: 20rpx;
+  color: #999999;
+}
+.writeaddress .nationMsg{
+  margin-top: 46rpx;
+  height: 740rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 4rpx 20rpx 0 rgba(0, 0, 0, 0.3);
+}
+
+
+.nationMsg .msgTop{
+    position: relative;
+    padding-left: 112rpx;
+    padding-top: 54rpx;
+}
+.nationMsg .msgTop .title{
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.nationMsg .msgTop .van-button{
+position: absolute;
+top: 80rpx;
+width: 130rpx;
+height: 46rpx;
+right: 40rpx;
+line-height: 46rpx;
+font-size: 24rpx;
+background-color: #d9f1dd;
+border-radius:10rpx;
+}
+.nationMsg .msgTop .warnText{
+  display: flex;
+  align-items: center;
+  color: #E7691D;
+  font-size: 20rpx;
+  padding-top: 16rpx;
+}
+.nationMsg .msgTop .warnimg{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.fromData{
+  margin-top: 34rpx;
+}
+
+.van-field__label{
+    display: flex;
+    justify-content:flex-end;
+    padding-right: 30rpx;
+}
+
+.nowbtn{
+  text-align: center;
+  margin-top: 102rpx;
+}
+.nowbtn .van-button{
+    width: 334rpx;
+    height: 76rpx;
+    background-color: #4c168e;
+    color: white;
+    border-radius: 10rpx;
+}

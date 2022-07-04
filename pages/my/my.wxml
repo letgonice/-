@@ -1,2 +1,44 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="my">
+    <view class="head">
+        <view class="avatar">
+            <image src="../../assets/image/avatar.jpg"></image>
+        </view>
+        <view class="user">
+            <text class="name">ys</text>
+            <text class="code">编码：HBK</text>
+        </view>
+    </view>
+
+    <view class="myBody">
+        <view class="myOrder mybodyCommon">
+          <van-cell title="我的订单" value="订单内容" is-link />
+          <van-grid border="{{false}}">
+            <van-grid-item icon="pending-payment" badge="2" text="代付款" />
+            <van-grid-item icon="logistics" badge="2" text="待发货" />
+            <van-grid-item icon="send-gift-o" badge="2" text="待收货" />
+            <van-grid-item icon="flower-o" badge="2" text="待评价" />
+          </van-grid>
+        </view>
+
+        <van-icon class-prefix="my-icon"  name="../../assets/image/icon/计算器.png" />
+
+        <view class="endCell mybodyCommon">
+            <view class="allContent">
+              <van-cell title="我的地址" is-link />
+              <van-cell title="我的优惠券" is-link />
+              <van-cell title="活动中心" is-link />
+              <van-cell title="联系客服" is-link />
+              <van-cell title="转运流程" is-link />
+              <van-cell title="转运须知" is-link />
+              <van-cell title="通知我们" is-link />
+            </view>
+        </view>
+    </view>
+
+
+
+
+
+
+</view>

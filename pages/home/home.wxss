@@ -229,6 +229,55 @@
       color: #4C168E;
   }
 
+  .van-popup{
+    border-radius: 20rpx;
+  }
+  .selectGoods{
+    width: 620rpx;
+    height:570rpx ;
+  }
+  .selectGoods .title{
+      padding-top: 34rpx;
+      text-align: center;
+      font-size: 36rpx;
+      margin-bottom: 30rpx;
+  }
+  .selectGoods .goodsBox {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content:space-evenly; */
+    justify-content: space-between;
+    padding: 0 56rpx;
+  }
+  .selectGoods .goodsBox .goodsbtn{
+      display: flex;
+      margin-bottom: 30rpx;
+      justify-content: center;
+      align-items: center;
+      width: 228rpx;
+      height: 96rpx;
+      border: 1px #ccc solid;
+      border-radius: 14rpx;
+      color: #4c168e;
+  }
+  .selectGoods .goodsBox .selectStyle{
+    background-color:#4c168e;
+    color:#ffffff;
+    font-weight: 700;
+  }
+  .selectGoods .handle{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 110rpx;
+      font-size: 36rpx;
+  }
+  .selectGoods .next{
+        color: #02BB00;
+        font-weight: 600;
+  }
+  
+
+
 
 
 
