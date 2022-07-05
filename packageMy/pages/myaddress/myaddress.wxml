@@ -1,0 +1,9 @@
+<!--packageMy/pages/myaddress/myaddress.wxml-->
+<view class="myAddress">
+  <view class="emptyBox">
+    <image class="empty" src="../../../assets/image/my/addressempty.png"></image>
+  </view>
+</view>
+<view class="myButton">
+    <van-button bindtap="addAddressBtn">添加地址</van-button>
+</view>

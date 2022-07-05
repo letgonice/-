@@ -1,0 +1,14 @@
+<!--components/addressCard/addressCard.wxml-->
+   <view  class="addressItem" wx:for="{{address}}" wx:key="id">
+        <view class="addressicon" style="background-color:{{item.bgc}};">
+          <image src="{{item.img}}"></image>
+        </view>
+        <view class="addressmsg">
+          <view class="nameNumber">
+            <text class="storeName">{{item.name}}</text>
+            <text>{{item.number}}</text>
+            <text bindtap="copyNumber" data-number="{{item.number}}" class="copyNumber" wx:if="{{item.copyText}}" >{{item.copyText}}</text>
+          </view>
+          <text class="addressDetail">{{item.address}}</text>
+        </view>
+   </view>

@@ -14,6 +14,11 @@
   align-items: center;
   justify-content:space-between;
 }
+.flex-c-c{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* 文本超出两行换行 */
 .tellipsis_2{
