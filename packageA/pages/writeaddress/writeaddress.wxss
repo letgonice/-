@@ -101,6 +101,9 @@ border-radius:10rpx;
     justify-content:flex-end;
     padding-right: 30rpx;
 }
+/* .fromData .input-class{
+  width: 500rpx;
+} */
 
 .nowbtn{
   text-align: center;

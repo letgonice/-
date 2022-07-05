@@ -1,0 +1,42 @@
+/* components/addressCard/addressCard.wxss */
+.addressItem{
+  display: flex;
+  align-items: center;
+}
+.addressicon{
+    margin-right:30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52rpx;
+    height: 52rpx;
+    border-radius: 52rpx;
+}
+ .addressicon image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+ .addressmsg{
+  width: 566rpx;
+}
+.addressmsg .nameNumber{
+    display: flex;
+    padding-bottom: 6rpx;
+    font-size: 30rpx;
+}
+.addressmsg .storeName{
+    padding-right: 34rpx;
+}
+.copyNumber{
+background-color: #d9f1cb;
+color:#40B850;
+font-size: 30rpx;
+margin-left: 16rpx;
+}
+.addressDetail{
+  display: inline-block;
+  color: #999999;
+  font-size: 24rpx;
+  line-height: 36rpx;
+}

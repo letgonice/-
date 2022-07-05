@@ -1,0 +1,22 @@
+/* packageMy/pages/myaddress/myaddress.wxss */
+.myAddress .emptyBox{
+  margin: 0 auto;
+  width: 646rpx;
+  height: 646rpx;
+}
+.myAddress .empty{
+  width: 100%;
+  height:100%;
+}
+
+.myButton {
+ text-align: center;
+}
+ .myButton .van-button{
+  width: 352rpx;
+  height: 72rpx;
+  background-color: #e7691d;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  color: white;
+}

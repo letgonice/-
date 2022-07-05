@@ -1,0 +1,6 @@
+/* components/nameForm/nameForm.wxss */
+.van-field__label{
+  display: flex;
+  justify-content:flex-end;
+  padding-right: 30rpx;
+}

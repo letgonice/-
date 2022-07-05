@@ -1,0 +1,12 @@
+<!--components/nameForm/nameForm.wxml-->
+<!--packageMy/pages/addAddress/addAddress.wxml-->
+<view>
+  <van-cell-group>
+    <van-field value="{{ username }}" clearable label="Name:" placeholder="Please fill in the recipient‘s name" border="{{ false }}" />
+    <van-field value="{{ password }}" label="Phone:" placeholder="Please fill in the recipient‘s phone" border="{{ false }}" />
+    <van-field value="{{ password }}" label="Address:" placeholder="Please fill in the address" border="{{ false }}" />
+    <van-field value="{{ password }}" label="City:" placeholder="Please fill in the city" border="{{ false }}" />
+    <van-field value="{{ password }}" label="PostCode:" placeholder="Please fill in the postcode" border="{{ false }}" />
+    <van-field value="{{ password }}" label="Country:" placeholder="Please fill in the postcode" border="{{ false }}" right-icon="arrow" />
+  </van-cell-group>
+</view>

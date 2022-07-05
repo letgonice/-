@@ -11,7 +11,16 @@
       "pages": [
         "pages/warehouse/warehouse",
         "pages/cost/cost",
-        "pages/writeaddress/writeaddress"
+        "pages/writeaddress/writeaddress",
+        "pages/orderDetails/orderDetails",
+        "pages/paydetail/paydetail"
+      ]
+    },
+    {
+      "root":"packageMy",
+      "pages": [
+        "pages/myaddress/myaddress",
+        "pages/addAddress/addAddress"
       ]
     }
   ],
@@ -30,7 +39,9 @@
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-grid": "@vant/weapp/grid/index",
-    "van-grid-item": "@vant/weapp/grid-item/index"
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index"
   },
   "tabBar": {
     "selectedColor": "#4c168e",

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "name-from":"/components/nameForm/nameForm"
+  },
+  "navigationBarTitleText": "添加地址"
+}

@@ -1,0 +1,80 @@
+<!--packageA/pages/orderDetails/orderDetails.wxml-->
+<view class="orderDetails">
+  <view class="address">
+   <view  class="addressItem" wx:for="{{address}}" wx:key="id">
+        <view class="addressicon" style="background-color:{{item.bgc}};">
+          <image src="{{item.img}}"></image>
+        </view>
+        <view class="addressmsg">
+          <view class="nameNumber">
+            <text class="storeName">{{item.name}}</text>
+            <text>{{item.number}}</text>
+            <text bindtap="copyNumber" data-number="{{item.number}}" class="copyNumber" wx:if="{{item.copyText}}" >{{item.copyText}}</text>
+          </view>
+          <text class="addressDetail">{{item.address}}</text>
+        </view>
+   </view>
+  </view>
+
+  <view class="order">
+      <view class="orderWarn">
+          <view class="warnImg">
+            <image src="/assets/image/icon/warn.png"></image>
+          </view>
+          快递全部到齐点击确认打包后，订单不可修改
+      </view>
+      <view class="orderConter">
+          <view class="expressNum">
+                <view>
+                  <image src="../../../assets/image/icon/星符号.png"></image>
+                快递个数
+                </view>
+                <input 	
+                bindblur="expressNumBlur" 
+                bindinput="limitNum"
+                disabled="{{iptStatus}}"
+                class="expressNumipt" value="{{expressNum}}" type="number"/>
+          </view>
+          <view>
+              <textarea name="" placeholder="备注信息，例如：去掉包装盒等" 	placeholder-style="font-size:24rpx" 	placeholder-class="textField-placeholder" class="textField" id="" cols="30" rows="10"></textarea>
+          </view>
+          <view class="expressItemOrder">
+                  <view class="item" wx:for="{{expressNum}}">
+                    <text class="index">{{index+1}}.</text>
+                    <view class="orederCodeInput">
+                        <input type="text" class="ipt" placeholder="请输入快递单号" />
+                        <view class="delete">
+                            <image src='../../../assets/image/icon/delete.png'></image>
+                        </view>
+                    </view>
+                  </view>
+                  <view class="addOrderCode flex-c-c">+<text>补充快递单号</text></view>
+          </view>
+      </view>
+  </view>
+
+    <view class="orderContent">
+        <view class="orderMsg">
+          订单号 :<text class="orderMsgText">{{orderMsg.orderCode}}</text>
+          <text class="copyOrderCode" bindtap="orderCode" data-orderCode="{{orderMsg.orderCode}}">复制</text>
+        </view>
+        <view class="orderMsg">
+          转运路线 :<text class="orderMsgText">{{orderMsg.path}}</text>
+        </view>
+        <view class="orderMsg">
+          转运渠道 :<text class="orderMsgText">{{orderMsg.goodsType}}</text>
+        </view>
+        <view class="orderMsg">
+          订单状态 :<text class="orderMsgText" style="color: #E7691D;">{{orderMsg.status}}</text>
+        </view>
+        <view class="orderMsg" style="padding:0;">
+          下单时间 :<text class="orderMsgText">{{orderMsg.buyTime}}</text>
+        </view>
+    </view>
+</view>
+
+
+<view class="btn">
+    <view class="call btnCom">联系客服</view>
+    <view class="cancelOrder btnCom" bindtap="cancelOrder">取消订单</view>
+</view>

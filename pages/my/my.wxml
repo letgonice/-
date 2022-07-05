@@ -25,7 +25,7 @@
 
         <view class="endCell mybodyCommon">
             <view class="allContent">
-              <van-cell title="我的地址" is-link />
+              <van-cell title="我的地址" url="../../packageMy/pages/myaddress/myaddress" is-link />
               <van-cell title="我的优惠券" is-link />
               <van-cell title="活动中心" is-link />
               <van-cell title="联系客服" is-link />

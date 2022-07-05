@@ -1,0 +1,97 @@
+<!--packageA/pages/paydetail/paydetail.wxml-->
+<view class="payDetail">
+  <view class="address">
+    <my-addressCard address="{{address}}"></my-addressCard>
+  </view>
+
+  <view class="variousMsg">
+      <view class="variousItem">
+          订单号<text>20220509140712345678</text>
+      </view>
+      <view class="variousItem">
+          转运线路<text>中国-美国</text>
+      </view>
+      <view class="variousItem">
+          预选渠道<text>普通货物</text>
+      </view>
+      <view class="variousItem">
+          获取属性<text>普通货物</text>
+      </view>
+      <view class="variousItem">
+          转运费<text>￥138.00</text>
+      </view>
+      <view class="variousItem">
+          附加费<text>￥38.00</text>
+      </view>
+      <view class="variousItem">
+          丢失险<text>￥0.00</text>
+      </view>
+      <view class="variousItem">
+          关税险<text>￥28.00</text>
+      </view>
+      <view class="variousItem youhjuan">
+         <view class="leftYouHui">
+          <image src="../../../assets/image/icon/优惠券.png"></image>
+          优惠券
+         </view>
+         <view class="rightYh">
+            <view style="color: red;">-￥28.00 </view>
+            <image src="../../../assets/image/icon/rightblack.png" style=" width: 36rpx; height: 36rpx;"></image>
+          </view>
+      </view>
+        <view class="selectcoupon">
+              <view class="warning">
+                  <image src="../../../assets/image/icon/warn.png"></image>
+              </view>
+                  为您优先选择最优折扣优惠！
+        </view>
+        <view class="case">
+              <view>
+                <text>已优惠</text>
+                <text class="reduce">￥8</text>
+                <text>小计</text>
+                <text class="jiesuan">￥28.00</text>
+              </view>
+        </view>
+  </view>
+
+</view>
+  <view class="payPrice">
+      <view class="allPrice">
+          <view class="price">
+              订单总金额：￥138.00
+          </view>
+            <view class="pact">
+                <van-checkbox  value="{{ checked }}" bind:change="onChange">阅读并同意《电子运单契约条款》</van-checkbox>
+            </view>
+      </view>
+      <van-button disabled="{{payBtnDisabled}}" class="payBtn flex-c-c">
+          立即支付
+      </van-button>
+  </view>
+      <van-popup
+        show="{{ show }}"
+        round
+        position="bottom"
+        custom-style="height: 70%"
+        bind:close="onClose"
+        style="opacity:0.97;"
+        bind:click-overlay="hidePopup"
+      >
+      转运协议
+      <text>
+        您使用霆宇国际网系统服务或提交运单，将货物交付给霆宇国际网仓库，就表示您或者您所代表的货物的利益人，接受霆宇国际网的运输条款及条件，无论您是否已经提交或将要提交运单。您口头或书面的指示如果与霆宇国际网的提交条款发生冲突，我们将不受您指示的约束。
+      </text>
+      <text>
+        使用霆宇国际服务或提交运单，代表您同意并遵守以下条款，并承担违反如下条款需承担的经济和法律责任：
+      </text>
+      <text>
+        1．您保证委托给霆宇国际网仓储和运输的物品属于可接受的运输品。
+      </text>
+      <text>
+        如果出现以下情况，将被视为不可接受的：国际航空运输协会（IATA）、国际民用航空组织（ICAO）、任何所适用法律国家的政府部门或其他相关组织划定为危险材料、危险物品、禁运或限运物品； 所适用的海关规定要求申报而未申报；或者霆宇国际网认为无法安全、合法地承运的物品（这些物品包括但不限于：动物、金条、货币、不记名的可流通票据、贵金属和宝石、军火或武器弹药及零配件、人类尸体、色情材料、打火机和非法麻醉剂/毒品等）。
+      </text>
+        <button disabled="{{consentDisabled}}" class="consent flex-c-c" bindtap="agreeclauseBtn">
+            {{consentText}}
+        </button>
+</van-popup>
