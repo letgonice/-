@@ -1,0 +1,27 @@
+/* packageMy/pages/flow/flow.wxss */
+.flow{
+  padding: 34rpx;
+}
+.flow .title{
+  font-size: 48rpx;
+}
+
+.flow .text{
+  display: inline-block;
+  line-height: 60rpx;
+}
+.flow .times{
+display: flex;
+justify-content: flex-end;
+font-size: 30rpx;
+color:#686868;
+}
+.flow  .van-button{
+  text-align: center;
+  width: 374rpx;
+  height: 82rpx;
+  background-color: #e7691d;
+  color: white;
+  border-radius:20rpx;
+  font-size: 36rpx;
+}

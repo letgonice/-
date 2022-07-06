@@ -1,3 +1,14 @@
 <view>
       <name-from></name-from>
+      <view style="border-top: 2rpx solid #ccc;margin: 0 10rpx;">
+    <van-cell title="设为默认"  border='{{false}}' >
+          <view slot="right-icon">
+            <van-switch checked="{{ switchStatus }}"  active-color="#00e266" bind:change="onChange" />
+          </view>
+    </van-cell>
+  </view>
+
+  <view class="addAddressBtn">
+    <van-button >添加地址</van-button>
+  </view>
 </view>

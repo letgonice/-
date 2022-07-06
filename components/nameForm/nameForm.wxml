@@ -1,12 +1,24 @@
 <!--components/nameForm/nameForm.wxml-->
 <!--packageMy/pages/addAddress/addAddress.wxml-->
-<view>
-  <van-cell-group>
-    <van-field value="{{ username }}" clearable label="Name:" placeholder="Please fill in the recipient‘s name" border="{{ false }}" />
-    <van-field value="{{ password }}" label="Phone:" placeholder="Please fill in the recipient‘s phone" border="{{ false }}" />
-    <van-field value="{{ password }}" label="Address:" placeholder="Please fill in the address" border="{{ false }}" />
-    <van-field value="{{ password }}" label="City:" placeholder="Please fill in the city" border="{{ false }}" />
-    <van-field value="{{ password }}" label="PostCode:" placeholder="Please fill in the postcode" border="{{ false }}" />
-    <van-field value="{{ password }}" label="Country:" placeholder="Please fill in the postcode" border="{{ false }}" right-icon="arrow" />
+<view style="padding-top: 52rpx;" class="nameFormdata">
+  <van-cell-group style="margin-top:52rpx;" border='{{false}}'>
+    <van-field value="{{ formData.name }}" clearable label="Name:" placeholder="Please fill in the recipient‘s name" border="{{ false }}" />
+    <van-field value="{{ formData.phone }}" label="Phone:" placeholder="Please fill in the recipient‘s phone" border="{{ false }}" />
+    <van-field value="{{ formData.address }}" label="Address:" placeholder="Please fill in the address" border="{{ false }}" />
+    <van-field value="{{ formData.city }}" label="City:" placeholder="Please fill in the city" border="{{ false }}" />
+    <van-field value="{{ formData.postcode }}" label="PostCode:" placeholder="Please fill in the postcode" border="{{ false }}" />
+      <van-field
+        label="Country"
+        placeholder='Please select a country'
+        right-icon="arrow"
+        value="{{formData.country}}"
+        readonly="true"
+        border="{{ false }}"
+        bindtap="selectCity"
+      />
+    <!-- <van-field value="{{ password }}" label="Country:" placeholder="Please fill in the postcode" border="{{ false }}" right-icon="arrow" /> -->
+    <van-area bind:cancel="cancelArea" bind:confirm="selectCountry" wx-if='{{showCountry}}' columns-num="2" area-list="{{ areaList }}" />
   </van-cell-group>
+
+  
 </view>

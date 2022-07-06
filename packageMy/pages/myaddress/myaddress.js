@@ -5,7 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userAddress: [
+      {
+      id: 2,
+      name: "KK Chen",
+      user:'我',
+      number: "15017812311",
+      address: 'MEGASYSTEMS INC 799 E DRAGRAM SUITE 5A TUCSON, AZ 85705 USA',
+      // img: '../../assets/image/icon/国外地址.png',
+      bgc: '#e7691d',
+      checked:true
+    },
+      {
+      id: 3,
+      name: "KK Chen",
+      user:'我',
+      number: "15017812311",
+      address: 'MEGASYSTEMS INC 799 E DRAGRAM SUITE 5A TUCSON, AZ 85705 USA',
+      // img: '../../assets/image/icon/国外地址.png',
+      bgc: '#4e148c',
+      checked:false
+    }
+  ],
   },
   addAddressBtn(){
     wx.navigateTo({

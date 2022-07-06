@@ -1,2 +1,16 @@
 <!--pages/coupon/coupon.wxml-->
-<text>pages/coupon/coupon.wxml</text>
+<view class="coupon">
+    <view class="topcolor"></view>
+</view>
+
+<view class="couponContent">
+  <navigator class="couponimg" url="/packageMy/pages/coupondetail/coupondetail">
+      <image src="/assets/image/coupon/优惠券-1.png"></image>
+  </navigator>
+  <navigator class="couponimg" url="/packageMy/pages/coupondetail/coupondetail">
+      <image src="/assets/image/coupon/优惠券-2.png"></image>
+  </navigator>
+  <navigator class="couponimg" url="/packageMy/pages/coupondetail/coupondetail">
+      <image src="/assets/image/coupon/优惠券-3.png"></image>
+  </navigator>
+</view>

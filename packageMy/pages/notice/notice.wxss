@@ -1,0 +1,27 @@
+/* packageMy/pages/notice/notice.wxss */
+.notice{
+  padding: 34rpx;
+}
+.notice .title{
+  font-size: 48rpx;
+}
+
+.notice .text{
+  display: inline-block;
+  line-height: 60rpx;
+}
+.notice .times{
+display: flex;
+justify-content: flex-end;
+font-size: 30rpx;
+color:#686868;
+}
+.notice  .van-button{
+  text-align: center;
+  width: 374rpx;
+  height: 82rpx;
+  background-color: #e7691d;
+  color: white;
+  border-radius:20rpx;
+  font-size: 36rpx;
+}

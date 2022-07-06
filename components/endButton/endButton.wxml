@@ -1,0 +1,9 @@
+<!--components/endButton/endButton.wxml-->
+<view class="endButton">
+    <view class="leftCall">
+        <van-button bindtap="cllClick">联系客服</van-button>
+    </view>
+    <view class="rightNext">
+        <van-button bindtap="nextClick">下一步</van-button>
+    </view>
+</view>

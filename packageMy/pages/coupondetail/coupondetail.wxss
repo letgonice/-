@@ -1,0 +1,81 @@
+/* packageMy/pages/coupondetail/coupondetail.wxss */
+.coupondetailpage .coupon{
+      display: flex;
+      align-items: center;
+      margin: 50rpx 19rpx 20rpx;
+      border-bottom: 2rpx #f3dcdc dashed;
+}
+.left{
+  border-right: 2rpx #f3dcdc dashed;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  width: 240rpx;
+  height: 192rpx;
+}
+.left .moneytext{
+  font-size: 80rpx;
+}
+.right{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20rpx;
+}
+.right  .roll{
+  font-size: 24rpx;
+}
+.right  .roll .rollto{
+      width: 88rpx;
+      height: 30rpx;
+      background-color: #f6390d;
+      color: white;
+      padding:0 8rpx;
+      margin-right: 10rpx;
+}
+.right  .times{
+    display: flex;
+    align-items: center;
+    margin-top: 10rpx;
+}
+.right .cntext{
+  font-size: 24rpx;
+  color: #F6390D;
+}
+.right .van-button{
+    padding: 0;
+    width: 128rpx;
+    height: 52rpx;
+    background-color: #f6390d;
+    color: white;
+    border-radius:20rpx;
+}
+.generaluse{
+  padding:0 80rpx ;
+  display: flex;
+  justify-content:space-between;
+  font-size: 24rpx;
+}
+
+.useAfterAll{
+  margin-top: 62rpx;
+  padding:0 52rpx;
+}
+.useAfterAll .title{
+  font-size: 40rpx;
+}
+.useAfterAll .useAfterContent{
+  box-sizing: border-box;
+  padding-top: 24rpx;
+  font-size: 28rpx;
+}
+
+.textPadding{
+  padding-top: 72rpx;
+}
+.useAfterContent view, .textPadding view{
+    padding-bottom: 10rpx;
+}

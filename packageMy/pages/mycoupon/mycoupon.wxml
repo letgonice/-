@@ -1,0 +1,6 @@
+<!--packageMy/pages/mycoupon/mycoupon.wxml-->
+<view class="mycounponPage">
+    <view wx:for="{{couponLIstanbul}}"  wx:key="id">
+      <couponCard couponItem="{{item}}"></couponCard>
+    </view>
+</view>
