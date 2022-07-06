@@ -28,6 +28,9 @@
 .addressmsg .storeName{
     padding-right: 34rpx;
 }
+.addressicon .texts{
+  color: white;
+}
 .copyNumber{
 background-color: #d9f1cb;
 color:#40B850;

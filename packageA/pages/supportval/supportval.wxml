@@ -1,0 +1,82 @@
+<!--packageA/pages/supportval/supportval.wxml-->
+<view style="position: relative;">
+  <view class="supportVal">
+    <view class="content">
+      <view class="goodsSupportVal">
+        <view class="orderNumber">订单号：<text>20220509140712345678</text></view>
+        <view class="SupportValText">
+          <view class="goodsSupportImg">
+            <image src="/assets/image/icon/保价.png"></image>
+          </view>
+          <text>保价</text>
+        </view>
+        <view class="SupportValinputBox">
+          <input class="SupportValinput" placeholder="自定义物品价格，请填写真实物品价格" type="text" />
+        </view>
+      </view>
+
+      <view class="insurance">
+        <view class="warnContent">
+          <view class="warnImg">
+            <image src="/assets/image/icon/warn.png"></image>
+          </view>
+          <view>
+            <view>国际快递由于多国调度，存在一定比例丢失的情况！</view>
+            <view style="padding-top: 6rpx;">如丢失包裹，购买丢失险可获得全额赔付赔付(最高5000元)!</view>
+          </view>
+        </view>
+        <van-cell title="丢失险（保价的3%">
+          <view slot="right-icon" class="switch">
+            <van-switch checked="{{ true }}" active-color="#00e266" bind:change="onChange" />
+          </view>
+        </van-cell>
+        <van-cell title="保险费：￥30.00" border='{{false}}'></van-cell>
+      </view>
+      <view class="insurance">
+        <view class="warnContent">
+          <view class="warnImg">
+            <image src="/assets/image/icon/warn.png"></image>
+          </view>
+          <view>
+            <view>电子产品等容易被税的高客单价产品建议购买关税保险!</view>
+            <view style="padding-top: 6rpx;">英国关税起征点为0.01英镑!</view>
+            <view style="padding-top: 6rpx;">综合关税=货值x增值税率+(货值+运费+货值x产品税</view>
+            <view style="padding-top: 6rpx;">率)x20%+清关杂费。</view>
+          </view>
+        </view>
+        <van-cell title="丢失险（保价的2%">
+          <view slot="right-icon" class="switch">
+            <van-switch checked="{{ true }}" active-color="#00e266" bind:change="onChange" />
+          </view>
+        </van-cell>
+        <van-cell title="保险费：￥20.00" border='{{false}}'></van-cell>
+      </view>
+    </view>
+    <end-button class="endButton" bindCallServer="callHandle" bindNextBtn="nextHandle"></end-button>
+  </view>
+
+  <view class="shade flex-c-c" bindtap="clickShade" wx:if="{{rishShow}}">
+    <view class="riskInform ">
+      <view class="title">风险通知书</view>
+      <view class="riskContent">
+        <view>尊敬的客户:</view>
+        <text >
+        <text class="riskText"> 您好，系统识别到您的订单未投保丢失保险，</text>
+          丢件的概率为万分之三，未购买丢失保险发生丢
+          失的赔付原则为:退运费，按照实际货值赔付但不
+          超过运费价值且最高不超过100美元。请悉知。
+        </text>
+      </view>
+      <view class="riskBtn">
+        <navigator class="leftBtn">
+            <van-button >购买保险</van-button>
+        </navigator>
+        <navigator class="rightBtn" url="/packageA/pages/paydetail/paydetail">
+            <van-button>承担风险</van-button>
+        </navigator>
+      </view>
+
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,36 @@
+<!--components/couponCard/couponCard.wxml-->
+<view class="counponbox">
+          <view class="counpon">
+                <view class="leftdiscount">
+                  <image  wx:if="{{couponItem.status==0}}" src="/assets/image/coupon/优惠券背景未过期.png">
+                  </image>
+                  <image  wx:else="{{couponItem.status==1}}" src="/assets/image/coupon/已使用背景.png">
+                  </image>
+                  <image  wx:if="{{couponItem.status==2}}" src="/assets/image/coupon/已过期背景.png">
+                  </image>
+                  <view class="leftdiscountContent">
+                      <view class="price">
+                          <view class="num">{{couponItem.discount}}</view>
+                          元
+                      </view>
+                      <view class="meet">满{{couponItem.meet}}元使用</view>
+                  </view>
+                </view>
+                <view class="rightDate">
+                    <view class="newCoupon">新品优惠券</view>
+                    <view class="disabled">{{couponItem.data}}</view>
+                    <view class="xieejiao">
+                        <image wx:if="{{couponItem.status==0}}" src="/assets/image/coupon/优惠券斜边未过期.png"></image>
+                        <image wx:else="{{couponItem.status==1}}" src="/assets/image/coupon/已使用斜边.png"></image>
+                        <image wx:if= "{{couponItem.status==2}}" src="/assets/image/coupon/已过期斜边.png"></image>
+                        <view class="gdtext">抵扣劵</view>
+                    </view>
+                    <view class="stamp" wx:if="{{couponItem.discountStatus==1}}">
+                      <image src="/assets/image/coupon/已使用印章.png"></image>
+                    </view>
+                    <view wx:if="{{couponItem.discountStatus==2}}" class="stamp">
+                      <image src="/assets/image/coupon/已过期印章.png"></image>
+                    </view>
+          </view>
+      </view>
+  </view>

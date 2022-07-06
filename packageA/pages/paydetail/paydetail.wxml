@@ -1,7 +1,7 @@
 <!--packageA/pages/paydetail/paydetail.wxml-->
 <view class="payDetail">
-  <view class="address">
-    <my-addressCard address="{{address}}"></my-addressCard>
+  <view class="address" wx:for="{{address}}" wx:key="id">
+    <my-addressCard address="{{item}}"></my-addressCard>
   </view>
 
   <view class="variousMsg">
@@ -69,7 +69,8 @@
           立即支付
       </van-button>
   </view>
-      <van-popup
+<view class="payPopul">
+  <van-popup
         show="{{ show }}"
         round
         position="bottom"
@@ -95,3 +96,5 @@
             {{consentText}}
         </button>
 </van-popup>
+
+</view>

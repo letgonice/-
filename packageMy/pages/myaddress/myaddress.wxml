@@ -1,9 +1,32 @@
 <!--packageMy/pages/myaddress/myaddress.wxml-->
-<view class="myAddress">
+<view class="myAddress" wx:if="{{userAddress.length<=0}}">
   <view class="emptyBox">
     <image class="empty" src="../../../assets/image/my/addressempty.png"></image>
   </view>
+    <view class="myButton">
+        <van-button bindtap="addAddressBtn">添加地址</van-button>
+    </view>
 </view>
-<view class="myButton">
-    <van-button bindtap="addAddressBtn">添加地址</van-button>
+
+<view class="haveAddress" wx:else>
+      <view wx:for="{{userAddress}}" wx:key="id">
+          <address-card address="{{item}}"></address-card>
+          <view></view>
+          <van-cell border="{{false}}">
+                <view slot="title">
+                  <van-checkbox value="{{ item.checked }}" 
+                  checked-color="#e97248"
+                  icon-size="30rpx">
+                  <text style="color:{{item.checked?'#e97248':''}}">{{ item.checked?'默认寄件地址':'设为默认寄件地址'}}</text>
+                  </van-checkbox>
+                </view>
+                <view slot="right-icon">
+                  <van-icon name="edit" size="20" />
+                  <van-icon name="delete-o" size='20' style="padding-left: 14rpx;" />
+                </view>
+          </van-cell>
+      </view>
+      <navigator url="/packageMy/pages/addAddress/addAddress">
+          <van-button block round>新建地址</van-button>
+      </navigator>
 </view>

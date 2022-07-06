@@ -20,3 +20,20 @@
   font-size: 28rpx;
   color: white;
 }
+.haveAddress{
+  padding:0 16rpx;
+  padding-top: 20rpx;
+}
+.custom-class{
+  padding: 0;
+}
+.van-cell{
+  padding:28rpx 0  !important;
+}
+.haveAddress .van-button {
+  position: fixed;
+  bottom: 0;
+  width: 710rpx;
+  background-color: #e7691d;
+  color: white;
+}

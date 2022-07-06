@@ -1,0 +1,18 @@
+<!--packageA/pages/payComplete/payComplete.wxml-->
+<view class="complete">
+    <view class="wxpayImg">
+          <image src="/assets/image/icon/payComplete.png"></image>
+    </view>
+    <view>
+      <text class="payComplete">支付成功</text>
+    </view>
+
+    <text class="textHint">
+      橙子会在24小时内为您发货，并推送信息给您，
+      请您耐心等待，{{countDown}}秒钟后为您跳转
+    </text>
+
+    <view class="completeBtn">
+      <van-button>完成</van-button>
+    </view>
+</view>

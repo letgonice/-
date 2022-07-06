@@ -4,3 +4,9 @@
   justify-content:flex-end;
   padding-right: 30rpx;
 }
+.addAddressBtn{text-align: center;}
+.addAddressBtn .van-button{
+  width: 450rpx;
+  height: 60rpx;
+  background-color:#e7691d;
+}

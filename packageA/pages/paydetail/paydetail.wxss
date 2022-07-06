@@ -84,6 +84,7 @@
   height: 132rpx;
   border-top: 2rpx solid #ccc;
   z-index: 999;
+  background-color: white;
 }
 .payPrice .allPrice{
   box-sizing: border-box;
@@ -109,9 +110,10 @@
   background-color:#274f05;
 }
 
-.van-popup{
+.payPopul .van-popup{
   padding:20rpx 20rpx 100rpx 20rpx;
   font-size: 28rpx;
+  margin-bottom: 130rpx;
 }
 .consent{
   margin: 20rpx auto;

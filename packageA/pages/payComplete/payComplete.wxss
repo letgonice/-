@@ -1,0 +1,35 @@
+/* packageA/pages/payComplete/payComplete.wxss */
+.complete .wxpayImg{
+  margin: 364rpx auto 0 ;
+  width: 142rpx;
+  height: 140rpx;
+}
+.complete .wxpayImg image{
+  width: 100%;
+  height: 100%;
+}
+.payComplete{
+  width: 100%;
+  text-align: center;
+  display:inline-block;
+  padding-top: 16rpx;
+  font-size: 40rpx;
+  color: #00b700;
+}
+.textHint{
+  display: flex;
+  font-size: 28rpx;
+  justify-content: center;
+  padding-top: 90rpx;
+}
+.completeBtn {
+  text-align: center;
+  margin-top: 152rpx;
+}
+.completeBtn .van-button{
+    width: 378rpx;
+    height: 84rpx;
+    color:#00b700;
+    border: 2rpx solid #00b700;
+    border-radius: 10rpx;
+}
