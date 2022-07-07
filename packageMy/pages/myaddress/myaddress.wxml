@@ -16,13 +16,17 @@
                 <view slot="title">
                   <van-checkbox value="{{ item.checked }}" 
                   checked-color="#e97248"
+                  bind:change="changeCheckbox"
+                  data-item="{{item}}"
                   icon-size="30rpx">
                   <text style="color:{{item.checked?'#e97248':''}}">{{ item.checked?'默认寄件地址':'设为默认寄件地址'}}</text>
                   </van-checkbox>
                 </view>
                 <view slot="right-icon">
                   <van-icon name="edit" size="20" />
-                  <van-icon name="delete-o" size='20' style="padding-left: 14rpx;" />
+                  <van-icon name="delete-o" size='20' 
+                  bindtap="delAddress" data-item="{{item}}"
+                   style="padding-left: 14rpx;" />
                 </view>
           </van-cell>
       </view>

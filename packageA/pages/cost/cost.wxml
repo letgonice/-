@@ -7,9 +7,9 @@
     <view class="title"></view>
     <view class="contCompust">
       <view class="goodsStrong">
-        <view class="goods boxStyle">
+        <view class="goods boxStyle" bindtap="cargoType">
           <view>转运货物</view>
-          <view>普通货物</view>
+          <view>{{seletGoods}}</view>
         </view>
         <view class="strong boxStyle" bindtap="strongBtn">
           <view>预估重量</view>
@@ -21,15 +21,19 @@
         <text>请输入长宽高</text>
       </view>
       <view class="money boxCompon">
-        预估运费（实际结果以订单为准）<text>¥ 0.00</text>
+        预估运费（实际结果以订单为准）<text>¥ {{cost==null?0:cost}}</text>
       </view>
     </view>
   </view>
 
-  <van-popup show="{{ show }}" bind:close="onClose" round>
+  <van-popup show="{{ strongShow }}" bind:close="onClose" round>
     <view class="strongInput">
     <view class="title">请输入重量与长宽高 <van-icon name="cross" bindtap="onClose" class="quitStrong" /></view>
       <label class="ipt">
+            <text>重量(KG):</text><input type="number" 		maxlength="{{4}}"
+            bindblur='goodsValue' value="{{strongInput.strong==null?'':strongInput.strong}}"/>
+      </label>
+      <!-- <label class="ipt">
             <text>重量(KG):</text><input type="number" value="{{strongInput.strong}}"/>
       </label>
       <label class="ipt">
@@ -37,11 +41,28 @@
       </label>
       <label class="ipt">
             <text>重量(KG):</text><input type="number" value="{{strongInput.strong}}"/>
-      </label>
-      <label class="ipt">
-            <text>重量(KG):</text><input type="number" value="{{strongInput.strong}}"/>
-      </label>
+      </label> -->
+      <view style="text-align: center;" bindtap="onClose">
+        <van-button type="info"  round>输入完毕</van-button>
+      </view>
     </view>
   </van-popup>
 
+  <van-popup show="{{ goodsTypeShow }}" bind:close="onClose" round >
+        <view class="goodsTypePopup">
+            <view style="text-align: center;padding-bottom: 20rpx;">选中货物类型</view>
+            <van-radio-group value="{{ radio }}" bind:change="onChange">
+                    <van-cell-group wx:for="{{goodsType}}" wx:key="id">
+                      <van-cell title="{{item.name}}" clickable data-name="{{item.id}}" bind:click="onClick">
+                        <van-radio slot="right-icon" name="{{item.id}}" />
+                      </van-cell>
+                    </van-cell-group>
+              </van-radio-group>
+              <view class="selectGoodsType" bindtap="quitShade" style="text-align: center;">
+                <van-button round type="info" >选择完毕</van-button>
+              </view>
+             
+          </view>
+
+  </van-popup>
 </view>

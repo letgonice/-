@@ -94,3 +94,31 @@ position: absolute;
 right: 60rpx;
 color: #ab2e2e;
 }
+
+.goodsTypePopup{
+  padding: 20rpx;
+  width: 600rpx;
+  height: 600rpx;
+}
+
+.selectGoodsType .van-button{
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  color: white;
+  width: 200rpx;
+}
+.ipt {
+  margin: 20rpx 0 ;
+  margin-left:50rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+.ipt input{
+  border: 2rpx #ccc solid;
+  height: 100%;
+  border-radius: 10rpx;
+  color: #666666;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+}

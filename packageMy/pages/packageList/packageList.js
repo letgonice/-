@@ -1,33 +1,25 @@
-// pages/order/order.js
+// packageMy/pages/packageList/packageList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    active: 0,
-    tabList:[
-      {id:'1',name:'全部'},
-      {id:'2',name:'待支付'},
-      {id:'3',name:'已支付'},
-      {id:'4',name:'已完成'}
+    packageList:[
+      {id:1,title:'全部包裹',text:'查看您的全部包裹'},
+      {id:2,title:'退回包裹',text:'退回商家或者仓库处理'},
+      {id:3,title:'异常包裹',text:'违禁品'},
+      {id:4,title:'入口包裹',text:'已入库的包裹'},
     ]
   },
-  onChange(event) {
-    console.log(event.detail.name);
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
 
   },
-  tapTab(e){
-      let index = e.target.dataset.index
-      this.setData({
-        active:index
-      })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

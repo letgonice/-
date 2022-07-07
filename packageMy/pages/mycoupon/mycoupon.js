@@ -10,9 +10,46 @@ Page({
       {id:1,meet:100,discountStatus:0,data:'2020.10.10-2020.11.11', discount:15, status:0},
       {id:2,meet:100,discountStatus:1,data:'2020.10.10-2020.11.11', discount:15,status:1},
       {id:3,meet:100,discountStatus:2,data:'2020.10.10-2020.11.11', discount:15,status:2}
-    ]
+    ],
+    shadeShow:false,
+    iptValue:''
   },
 
+  convertCoupon(){
+    this.setData({
+      shadeShow:true
+    })
+  },
+  cancel(){
+    this.setData({
+      shadeShow:false
+    })
+  },
+  getCoupon(){
+    if(this.data.iptValue==''){
+      wx.showToast({
+        title: '兑换码不能为空',
+        icon:'none'
+      })
+      return
+    }else{
+      let code = this.data.iptValue
+      console.log(code);
+      this.setData({
+        iptValue:'',
+        shadeShow:false
+      })
+    }
+
+    // this.setData({
+    //   iptValue:this.data.iptValue.value
+    // })
+  },
+  iptValueChange(event){
+          this.setData({
+            iptValue:event.detail.value
+          })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

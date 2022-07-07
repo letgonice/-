@@ -187,6 +187,7 @@ font-size: 22rpx;
 .expressItemOrder .item .delete{
   position: absolute;
   top:50%;
+  z-index: 999999;
   margin-top:-20rpx;
   right: 8rpx;
   width: 40rpx;

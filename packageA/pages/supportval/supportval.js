@@ -5,8 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show:true,
-    rishShow:false
+    // 保险
+    loseRiskCheck:true,
+    tariffRiskCheck:true,
+
+    //显示风险通知书
+    rishShow:false,
+    //物品的价格
+    supportValue:'',
+    //选中保险的保险费
+    insurance:{
+      loseRisk:0,
+      tariffRisk:0
+    }
   },
   callHandle(e){
     console.log('call',e);
@@ -18,17 +29,69 @@ Page({
   },
 
   clickShade(){
-    this.setData({
-      rishShow:false
-    })
+   this.setData({
+    rishShow:false
+   })
+
+  },
+// 离开ipt
+  blurValue(event){
+    let nums =event.detail.value==''?0:parseInt(event.detail.value)
+    let loseRisk =nums==0?0:nums*3/100
+    let tariffRisk =nums==0?0:nums*2/100
+        this.setData({
+          'insurance.loseRisk':loseRisk,
+          'insurance.tariffRisk':tariffRisk
+        })  
   },
   /**
    * 生命周期函数--监听页面加载
    */
+  // 丢失险选中
+  loseRiskonChange(event){
+        this.setData({
+          loseRiskCheck:event.detail
+        })
+  },
+  // 关税险选中
+  tariffRiskChange(event){
+    this.setData({
+      tariffRiskCheck:event.detail
+    })
+},
   onLoad(options) {
 
   },
+  buy(){
+    let obj = {
+      loseRisk:0,
+      tariffRisk:0
+    }
+    if(this.data.loseRiskCheck){obj.loseRisk=this.data.insurance.loseRisk}
+    if(this.data.tariffRiskCheck){
+      obj.tariffRisk=this.data.insurance.tariffRisk}
+      let data = `${Object.keys(obj)[0]}=${obj.loseRisk}&${Object.keys(obj)[1]}=${obj.tariffRisk}
+      `
+      this.setData({
+        rishShow:false
+      })
+      wx.navigateTo({
+        url: `/packageA/pages/paydetail/paydetail?${data.trim()}`,
+      })
+  },
+  // 承担风险按钮
+  assume(){
+    let obj = {
+      loseRisk:0,
+      tariffRisk:0
+    }
+      let data = `${Object.keys(obj)[0]}=${obj.loseRisk}&${Object.keys(obj)[1]}=${obj.tariffRisk}
+      `
 
+      wx.navigateTo({
+        url: `/packageA/pages/paydetail/paydetail?${data.trim()}`,
+      })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

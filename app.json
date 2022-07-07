@@ -26,7 +26,8 @@
         "pages/coupondetail/coupondetail",
         "pages/flow/flow",
         "pages/notice/notice",
-        "pages/mycoupon/mycoupon"
+        "pages/mycoupon/mycoupon",
+        "pages/packageList/packageList"
       ]
     }
   ],
@@ -49,7 +50,12 @@
     "van-checkbox": "@vant/weapp/checkbox/index",
     "van-checkbox-group": "@vant/weapp/checkbox-group/index",
     "van-area": "@vant/weapp/area/index",
-    "van-switch": "@vant/weapp/switch/index"
+    "van-switch": "@vant/weapp/switch/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index"
   },
   "tabBar": {
     "selectedColor": "#4c168e",

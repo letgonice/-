@@ -1,0 +1,15 @@
+<!--packageMy/pages/packageList/packageList.wxml-->
+    <view class="packageListPage">
+          <view class="packageList">
+                <view class="packageItem" wx:for="{{packageList}}" wx:key="id">
+                    <view>
+                      <view>{{item.title}}</view>
+                      <view class="text">{{item.text}}</view>
+                    </view>
+                </view>
+          </view>
+
+          <view class="packageMsgTable">
+          
+          </view>
+    </view>

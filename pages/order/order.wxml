@@ -1,2 +1,12 @@
 <!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<view class="orderPage">
+  <van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="全部">
+      <orderCard></orderCard>
+  </van-tab>
+  <van-tab title="待支付">内容 2</van-tab>
+  <van-tab title="已支付">内容 3</van-tab>
+  <van-tab title="已完成">内容 4</van-tab>
+</van-tabs>
+
+</view>
