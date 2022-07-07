@@ -4,3 +4,19 @@
       <couponCard couponItem="{{item}}"></couponCard>
     </view>
 </view>
+<view class="getMycoupon">
+    <van-button bindtap="convertCoupon"  bind:click="onClickShow">兑换优惠券</van-button>
+</view>
+
+<van-overlay show="{{ shadeShow }}"  z-index="999999">
+  <view class="wrapper">
+    <view class="block shade">
+        <text class="title">兑换优惠券</text>
+        <input class="cdkey" focus="{{true}}"		bindblur="iptValueChange" value="{{iptValue}}" placeholder="请输入优惠券code,进行兑换" type="text"/>
+        <view class="btnSet">
+            <van-button bindtap="cancel">取消</van-button>
+            <van-button custom-style="color:#02BB00" bindtap="getCoupon">领取</van-button>
+        </view>
+    </view>
+  </view>
+</van-overlay>

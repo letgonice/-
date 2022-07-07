@@ -24,7 +24,9 @@
         <image class="warnimg" src="../../../assets/image/icon/warn.png"></image>
         请用英文填写
       </view>
-      <van-button plain size="mini" type="primary">选择地址</van-button>
+      <navigator url="/packageMy/pages/myaddress/myaddress">
+        <van-button plain size="mini" type="primary">选择地址</van-button>
+      </navigator>
     </view>
     <view class="fromData">
       <van-cell-group>
@@ -41,8 +43,8 @@
       </van-cell-group>
     </view>
   </view>
-    <view class="nowbtn">
+    <navigator url="/packageMy/pages/notice/notice" class="nowbtn">
       <van-button plain>立即转运</van-button>
-    </view>
+    </navigator>
 
 </view>

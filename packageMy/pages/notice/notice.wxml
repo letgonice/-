@@ -13,8 +13,8 @@
       </text>
     <view class="times">2020-11-02 23:46:48</view>
 <view style="text-align: center;margin-top: 72rpx;">
-  <van-button>
-        已阅读
+  <van-button bindtap="toOrderDetail" disabled="{{btnstatus}}">
+        {{btnText}}
     </van-button>
 </view>
 </view>

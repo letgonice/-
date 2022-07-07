@@ -1,0 +1,33 @@
+/* packageMy/pages/packageList/packageList.wxss */
+
+.packageList{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
+}
+.packageList .packageItem{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 32rpx;
+    margin-top: 28rpx;
+    width: 322rpx;
+    height: 182rpx;
+    background-color:#0881ec;
+    border-radius: 20rpx;
+    color: white;
+    box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.4);
+    font-size: 34rpx;
+}
+.packageItem .text{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+.packageMsgTable{
+  margin: 46rpx auto;
+  border-radius: 20rpx;
+  width: 702rpx;
+  height: 722rpx;
+  box-shadow: 0px 0px 5px 0px rgba(174, 174, 174, 35);
+}

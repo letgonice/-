@@ -5,9 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    btnText:5,
+    btnstatus:true
   },
 
+  toOrderDetail(){
+    if(!this.data.btnstatus){
+      wx.navigateTo({
+        url: '/packageA/pages/orderDetails/orderDetails',
+      })
+    }
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,7 +35,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+      let _this = this
+      let timer = null;
+      timer = setInterval(()=>{
+        if(_this.data.btnText==0){
+          clearInterval(timer)
+          _this.setData({
+            btnText:'我已知悉',
+            btnstatus:false
+          })
+          return
+        }
+            _this.setData({
+              btnText:this.data.btnText-1
+            })
+      },1000)
   },
 
   /**

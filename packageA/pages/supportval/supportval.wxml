@@ -11,7 +11,7 @@
           <text>保价</text>
         </view>
         <view class="SupportValinputBox">
-          <input class="SupportValinput" placeholder="自定义物品价格，请填写真实物品价格" type="text" />
+          <input class="SupportValinput" placeholder="自定义物品价格，请填写真实物品价格" type="number" value="{{supportValue}}"	bindblur='blurValue' />
         </view>
       </view>
 
@@ -27,10 +27,10 @@
         </view>
         <van-cell title="丢失险（保价的3%">
           <view slot="right-icon" class="switch">
-            <van-switch checked="{{ true }}" active-color="#00e266" bind:change="onChange" />
+            <van-switch checked="{{ loseRiskCheck }}" active-color="#00e266" bind:change="loseRiskonChange" />
           </view>
         </van-cell>
-        <van-cell title="保险费：￥30.00" border='{{false}}'></van-cell>
+        <van-cell title="保险费：￥{{insurance.loseRisk}}" border='{{false}}'></van-cell>
       </view>
       <view class="insurance">
         <view class="warnContent">
@@ -46,10 +46,10 @@
         </view>
         <van-cell title="丢失险（保价的2%">
           <view slot="right-icon" class="switch">
-            <van-switch checked="{{ true }}" active-color="#00e266" bind:change="onChange" />
+            <van-switch checked="{{ tariffRiskCheck }}" active-color="#00e266" bind:change="tariffRiskChange" />
           </view>
         </van-cell>
-        <van-cell title="保险费：￥20.00" border='{{false}}'></van-cell>
+        <van-cell title="保险费：￥{{insurance.tariffRisk}}" border='{{false}}'></van-cell>
       </view>
     </view>
     <end-button class="endButton" bindCallServer="callHandle" bindNextBtn="nextHandle"></end-button>
@@ -68,12 +68,12 @@
         </text>
       </view>
       <view class="riskBtn">
-        <navigator class="leftBtn">
-            <van-button >购买保险</van-button>
-        </navigator>
-        <navigator class="rightBtn" url="/packageA/pages/paydetail/paydetail">
+        <view class="leftBtn">
+            <van-button  catchtap="buy">购买保险</van-button>
+        </view>
+        <view class="rightBtn" catchtap="assume">
             <van-button>承担风险</van-button>
-        </navigator>
+        </view>
       </view>
 
     </view>

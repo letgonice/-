@@ -33,22 +33,30 @@
                 bindblur="expressNumBlur" 
                 bindinput="limitNum"
                 disabled="{{iptStatus}}"
-                class="expressNumipt" value="{{expressNum}}" type="number"/>
+                maxlength="{{2}}"
+                class="expressNumipt" value="{{expressArr.length==0?'':expressArr.length}}" type="number"/>
           </view>
           <view>
               <textarea name="" placeholder="备注信息，例如：去掉包装盒等" 	placeholder-style="font-size:24rpx" 	placeholder-class="textField-placeholder" class="textField" id="" cols="30" rows="10"></textarea>
           </view>
           <view class="expressItemOrder">
-                  <view class="item" wx:for="{{expressNum}}">
+                  <view class="item" wx:for="{{expressArr}}" wx:key="id">
                     <text class="index">{{index+1}}.</text>
                     <view class="orederCodeInput">
-                        <input type="text" class="ipt" placeholder="请输入快递单号" />
-                        <view class="delete">
+                        <input type="text"
+                         value="{{item.value}}" 
+                         	bindblur="getOrderCode" data-id="{{item.id}}"
+                          disabled="{{item.status}}"
+                           class="ipt" 
+                           placeholder="请输入快递单号" />
+                        <view class="delete" data-id="{{item.id}}" 
+                        catchtap="delOrderNum" 
+                        >
                             <image src='../../../assets/image/icon/delete.png'></image>
                         </view>
                     </view>
                   </view>
-                  <view class="addOrderCode flex-c-c">+<text>补充快递单号</text></view>
+                  <view class="addOrderCode flex-c-c" bindtap='addOrder' >+<text>补充快递单号</text></view>
           </view>
       </view>
   </view>

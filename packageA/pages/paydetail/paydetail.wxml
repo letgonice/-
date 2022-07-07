@@ -24,10 +24,10 @@
           附加费<text>￥38.00</text>
       </view>
       <view class="variousItem">
-          丢失险<text>￥0.00</text>
+          丢失险<text>￥{{insurance.loseRisk}}</text>
       </view>
       <view class="variousItem">
-          关税险<text>￥28.00</text>
+          关税险<text>￥{{insurance.tariffRisk}}</text>
       </view>
       <view class="variousItem youhjuan">
          <view class="leftYouHui">

@@ -5,6 +5,10 @@ Page({
        * 页面的初始数据
        */
       data: {
+        insurance:{
+          loseRisk:0,
+          tariffRisk:0
+        },
         address: [{
           id: 2,
           name: "KK Chen",
@@ -51,6 +55,7 @@ Page({
           this.setData({
             show:false
           })
+          
       },
 
       // 支付按钮状态
@@ -65,7 +70,10 @@ Page({
          * 生命周期函数--监听页面加载
          */
         onLoad(options) {
-
+          console.log(options);
+          this.setData({
+            insurance:options
+          })
         },
 
         /**
@@ -79,7 +87,6 @@ Page({
          * 生命周期函数--监听页面显示
          */
         onShow() {
-
         },
 
         /**

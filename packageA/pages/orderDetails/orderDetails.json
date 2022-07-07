@@ -1,4 +1,4 @@
 {
-  "usingComponents": {},
+  "usingComponents": {"orderCard":"/components/couponCard/couponCard"},
   "navigationBarTitleText": "订单详情"
 }
