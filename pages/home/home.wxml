@@ -2,21 +2,21 @@
   <view class="banner">
     <swiper indicator-dots autoplay interval="{{2000}}" circular class="swiper" indicator-color="#333333" indicator-active-color="#dddddd">
       <swiper-item>
-        <image src="../../assets/image/swiper/@1x轮播图.png"></image>
+        <image src="/assets/image/swiper/swipeimg.png"></image>
       </swiper-item>
       <swiper-item>
-        <image src="../../assets/image/swiper/@1x轮播图.png"></image>
+        <image src="/assets/image/swiper/swipeimg.png"></image>
       </swiper-item>
     </swiper>
   </view>
   <view class="semicircle">
     <view class="nationbox">
       <view class="nation flex-xbt-ycenter">
-        <text>中国</text>
+        <text class="selectNation">中国</text>
         <view class="imgs">
-          <image src="../../assets/image/飞机.png"></image>
+          <image src="/assets/image/飞机.png"></image>
         </view>
-        <text>美国</text>
+        <navigator class="selectNation" url="/packageA/pages/search/search">{{nation}}</navigator>
       </view>
       <view class="toTransferPage">
         <van-button bindtap="immediatelyBtn">立即转运</van-button>
@@ -26,39 +26,39 @@
 
   <view style="margin-top:200rpx;" class="relation">
     <view class="serviceImg">
-      <image src="../../assets/image/联系斑马.png"></image>
+      <image src="/assets/image/联系斑马.png"></image>
     </view>
     <view class="relationText">
       <text class="storng">联系河马</text>
       <text class="text">为你解决下单疑问？</text>
     </view>
     <view class="right">
-      <image src="../../assets/image/icon/right.png"></image>
+      <image src="/assets/image/icon/right.png"></image>
     </view>
   </view>
 
   <view class="costAndDeal flex-xbt-ycenter">
-    <view class="cost public">
+    <navigator class="cost public" url="/packageMy/pages/notice/notice">
       <view class="title">转运须知</view>
       <text class="text">流程和注意事项</text>
       <view class="img">
         <view class="right">
-          <image src="../../assets/image/icon/right.png"></image>
+          <image src="/assets/image/icon/right.png"></image>
         </view>
         <view class="car">
-          <image src="../../assets/image/icon/货车.png"></image>
+          <image src="/assets/image/icon/货车.png"></image>
         </view>
       </view>
-    </view>
+    </navigator>
     <navigator class="deal public" url="/packageA/pages/cost/cost">
       <view class="title">运费估算</view>
       <text class="text">费用心中有数</text>
       <view class="img">
         <view class="right">
-          <image src="../../assets/image/icon/right.png"></image>
+          <image src="/assets/image/icon/right.png"></image>
         </view>
         <view class="price">
-          <image src="../../assets/image/icon/计算器.png"></image>
+          <image src="/assets/image/icon/计算器.png"></image>
         </view>
       </view>
     </navigator>
@@ -80,13 +80,8 @@
     <view class="selectGoods">
       <view class="title">预选渠道</view>
       <view class="goodsBox">
-        <view wx:for="{{popup.btnList}}" data-index="{{index}}" data-name="{{item}}" bindtap="selectGoods"  
+        <view wx:for="{{popup.btnList}}" wx:key="index" data-index="{{index}}" data-name="{{item}}" bindtap="selectGoods"  
         class="goodsbtn {{index==popup.index?'selectStyle':''}}"  >{{item}}</view>
-            <!-- <view class="goodsbtn selectStyle">普通货物</view>
-            <view class="goodsbtn">电子产品</view>
-            <view class="goodsbtn">液体粉末</view>
-            <view class="goodsbtn">内地EMS</view>
-            <view class="goodsbtn end">广东EMS</view> -->
       </view>
       <view class="handle">
           <view class="quit" bindtap="quitBtn">取消</view>

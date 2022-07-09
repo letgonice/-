@@ -145,6 +145,15 @@ font-size: 22rpx;
   width: 100%;
   height: 114rpx;
 }
+.blocks .perch .van-button{
+margin-top: 100rpx;
+width: 100%;
+height: 114rpx;
+background-color: #4c168e;
+color: white;
+border: none;
+font-size: 36rpx;
+}
 
 .btn .call{
  color: white;
@@ -161,6 +170,10 @@ font-size: 22rpx;
   width:50%;
   height: 100%;
   color: 36rpx;
+}
+.btn .affirm{
+  background:#274f05;
+  color:#e8e4ad;
 }
 .expressItemOrder {
     margin-top: 38rpx;
@@ -206,4 +219,45 @@ height: 100%;
   border-radius: 30rpx;
   font-size: 24rpx;
   margin-left: 310rpx;
+}
+.expressItemOrder .orderNumberStatus{
+  position: absolute;
+  margin-top:50%;
+  top:-16rpx ;
+  right: 10rpx;
+  width: 80rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #e7691d;
+  background-color: #b39acd;
+  color: #4c168e;
+}
+
+/* 待支付 */
+.unpaid{
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+  margin-top: 28rpx;
+  padding:28rpx 28rpx;
+}
+.unpaid .goodsStrongImg .imgList{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10rpx;
+  
+}
+.unpaid .goodsStrongImg .imgList image{
+  box-sizing: border-box;
+  padding-bottom: 10rpx;
+  margin-right:20rpx;
+  width: 186rpx;
+  height: 164rpx;
+  border-radius: 10rpx;
+}
+.unpaidcontent .unpaidcontText{
+  margin-bottom: 22rpx;
+  font-size: 28rpx;
+}
+.unpaidcontent .textStyle{
+  color: #ed811d;
 }

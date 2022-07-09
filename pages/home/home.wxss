@@ -32,7 +32,12 @@
   border-bottom-right-radius: 250rpx;
   border-bottom-left-radius: 250rpx;
 }
-
+.selectNation{
+  width: 120rpx;
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+}
 .nationbox {
   position: absolute;
   top: 0rpx;

@@ -11,10 +11,35 @@ Page({
       {id:'2',name:'待支付'},
       {id:'3',name:'已支付'},
       {id:'4',name:'已完成'}
-    ]
+    ],
+    orderList:[
+      {id:1,orderNumber:12212122121211,status:0},
+      {id:2,orderNumber:675634233434434,status:1},
+      {id:3,orderNumber:23556744555566,status:2},
+      {id:4,orderNumber:23556744555566,status:3},
+      {id:5,orderNumber:23556744555566,status:4}
+    ],
+    awaitList:[]
   },
   onChange(event) {
-    console.log(event.detail.name);
+    let index =  event.detail.name
+    let result
+    if(index==1){
+       result = this.data.orderList.filter((item)=>{
+          return item.status==2
+      })
+      this.setData({
+        awaitList:result
+      })
+    
+    }else if(index==3){
+      result = this.data.orderList.filter((item)=>{
+        return item.status==4
+      })
+      this.setData({
+        awaitList:result
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -31,10 +56,34 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
+  tosupport(e){
+    wx.navigateTo({
+      url: `/packageA/pages/supportval/supportval?orderNumber=${e.detail.orderNumber=''}`,
+    })
+  },
   onReady() {
 
   },
 
+  copyNum(data){
+      let orderNum = data.detail;
+      wx.setClipboardData({
+        data: orderNum+'',
+        success(){
+          wx.showToast({
+            title: '复制成功',
+            icon:"none"
+          })
+        }
+      })
+  },
+  orderDetail(data){
+    let  query = data.detail.status
+    console.log(query);
+    wx.navigateTo({
+      url: '/packageA/pages/orderDetails/orderDetails',
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

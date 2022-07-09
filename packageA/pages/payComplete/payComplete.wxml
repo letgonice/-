@@ -12,7 +12,7 @@
       请您耐心等待，{{countDown}}秒钟后为您跳转
     </text>
 
-    <view class="completeBtn">
+    <navigator class="completeBtn" bindtap="tohome">
       <van-button>完成</van-button>
-    </view>
+    </navigator>
 </view>

@@ -27,11 +27,11 @@
             <view class="allContent">
               <van-cell title="我的地址" url="/packageMy/pages/myaddress/myaddress" is-link />
               <van-cell title="我的优惠券" url="/packageMy/pages/mycoupon/mycoupon" is-link />
-              <van-cell title="活动中心" is-link />
+              <van-cell title="活动中心" url='/pages/activityCenter/activityCenter' is-link />
               <van-cell title="联系客服" is-link />
               <van-cell title="转运流程" url="/packageMy/pages/flow/flow" is-link />
               <van-cell title="转运须知" url="/packageMy/pages/notice/notice" is-link />
-              <van-cell title="通知我们" is-link />
+              <van-cell title="通知我们" is-link  />
             </view>
         </view>
     </view>

@@ -1,17 +1,23 @@
-// pages/my/my.js
+// packageMy/pages/selectCoupon/selectCoupon.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    couponList:[
+      //discountStatus 0代表元1代表折 status 0未使用 1已使用 2已过期
+      {id:1,meet:100,discountStatus:0,startTime:'2020.10.10',  overTime:'2020.11.11',  discount:15, status:0,workable:true},
+      {id:2,meet:100,discountStatus:1,startTime:'2020.10.10',  overTime:'2020.11.11',  discount:15,status:1,workable:false},
+      {id:3,meet:100,discountStatus:2,startTime:'2020.10.10',  overTime:'2020.11.11',  discount:15,status:2,workable:false}
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+
   },
 
   /**

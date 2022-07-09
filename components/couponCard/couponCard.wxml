@@ -18,12 +18,15 @@
                 </view>
                 <view class="rightDate">
                     <view class="newCoupon">新品优惠券</view>
-                    <view class="disabled">{{couponItem.data}}</view>
+                    <view class="disabled">{{couponItem.startTime}}-{{couponItem.overTime}}</view>
                     <view class="xieejiao">
                         <image wx:if="{{couponItem.status==0}}" src="/assets/image/coupon/优惠券斜边未过期.png"></image>
                         <image wx:else="{{couponItem.status==1}}" src="/assets/image/coupon/已使用斜边.png"></image>
                         <image wx:if= "{{couponItem.status==2}}" src="/assets/image/coupon/已过期斜边.png"></image>
                         <view class="gdtext">抵扣劵</view>
+                    </view>
+                    <view class="selectCoupon" wx:if="{{couponItem.workable}}">
+                        <van-button>使用</van-button>
                     </view>
                     <view class="stamp" wx:if="{{couponItem.discountStatus==1}}">
                       <image src="/assets/image/coupon/已使用印章.png"></image>

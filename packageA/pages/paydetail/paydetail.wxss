@@ -124,3 +124,19 @@
   background-color: #e7691d;
   border-radius: 40rpx;
 }
+
+
+.selectCouponBox{
+  /* padding:14rpx; */
+}
+.selectCouponBox .selectCoupon{
+  position: relative;
+  text-align: center;
+  margin:  40rpx 0 ;
+  font-size: 40rpx;
+}
+.selectCoupon .quitselectCoupon{
+  position:  absolute;
+  right: 60rpx;
+  top: 10rpx;
+}

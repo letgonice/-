@@ -15,7 +15,32 @@
         </view>
    </view>
   </view>
-
+    <view class="unpaid">
+          <view class="unpaidcontent">
+              <view class="unpaidcontText">运费：￥138.00</view>
+              <view class="unpaidcontText">附加费：￥0.00</view>
+              <view class="unpaidcontText">称重重量：5.6kg</view>
+              <view class="unpaidcontText">分拣备注：<text class="textStyle">已拆封分拣，统一归类</text></view>
+              <view class="unpaidcontText">打包备注：<text class="textStyle">东西太多，已统一打包加固</text></view>
+              <view class="goodsStrongImg unpaidcontText">
+                  <view>称重图片：</view>
+                  <view class="imgList">
+                    <image src="/assets/image/称重图片.png"></image>
+                    <image src="/assets/image/称重图片.png"></image>
+                    <image src="/assets/image/称重图片.png"></image>
+                  </view>
+              </view>
+              
+              <view class="unpaidcontText">
+              <text style="display: inline-block; margin-bottom: 10rpx;">账单</text>
+                <view wx:for="{{parcelList}}" wx:key="id" style="margin-bottom: 30rpx;">
+                    <parcelCard parcelData="{{item}}"></parcelCard>
+                </view>
+              </view>
+           
+          </view>
+    
+    </view>
   <view class="order">
       <view class="orderWarn">
           <view class="warnImg">
@@ -34,11 +59,14 @@
                 bindinput="limitNum"
                 disabled="{{iptStatus}}"
                 maxlength="{{2}}"
+                placeholder="请输入（输入后弹出快递单号位置）"
+                style="font-size: 22rpx;"
                 class="expressNumipt" value="{{expressArr.length==0?'':expressArr.length}}" type="number"/>
           </view>
           <view>
               <textarea name="" placeholder="备注信息，例如：去掉包装盒等" 	placeholder-style="font-size:24rpx" 	placeholder-class="textField-placeholder" class="textField" id="" cols="30" rows="10"></textarea>
           </view>
+
           <view class="expressItemOrder">
                   <view class="item" wx:for="{{expressArr}}" wx:key="id">
                     <text class="index">{{index+1}}.</text>
@@ -46,13 +74,16 @@
                         <input type="text"
                          value="{{item.value}}" 
                          	bindblur="getOrderCode" data-id="{{item.id}}"
-                          disabled="{{item.status}}"
+                          disabled="{{item.iptDisaBled}}"
                            class="ipt" 
-                           placeholder="请输入快递单号" />
-                        <view class="delete" data-id="{{item.id}}" 
-                        catchtap="delOrderNum" 
+                           placeholder="请输入快递单号"
+                            />
+                        <view class="delete" 
                         >
-                            <image src='../../../assets/image/icon/delete.png'></image>
+                        <image wx:if="{{item.status==0}}" catchtap="delOrderNum" data-id="{{item.id}}"  src='../../../assets/image/icon/delete.png'></image>
+                        <view wx:if="{{item.status==1}}" class="orderNumberStatus">已入库</view>
+                        <view wx:if="{{item.status==2}}" class="orderNumberStatus">待入仓</view>
+                        <!-- <view class="orderNumberStatus">已入库</view> -->
                         </view>
                     </view>
                   </view>
@@ -73,16 +104,29 @@
           转运渠道 :<text class="orderMsgText">{{orderMsg.goodsType}}</text>
         </view>
         <view class="orderMsg">
-          订单状态 :<text class="orderMsgText" style="color: #E7691D;">{{orderMsg.status}}</text>
+          订单状态 :<text class="orderMsgText" style="color: #E7691D;">{{orderMsg.orderStatus}}</text>
+        </view>
+        <view class="orderMsg">
+          支付状态 :<text class="orderMsgText" style="color: #ef0606;">{{orderMsg.payStatus}}</text>
+        </view>
+        <view class="orderMsg">
+          下单时间 :<text class="orderMsgText">{{orderMsg.buyTime}}</text>
         </view>
         <view class="orderMsg" style="padding:0;">
-          下单时间 :<text class="orderMsgText">{{orderMsg.buyTime}}</text>
+          入仓时间 :<text class="orderMsgText">{{orderMsg.haveStore}}</text>
         </view>
     </view>
 </view>
 
 
-<view class="btn">
+<view class="btn" wx:if="{{true}}">
     <view class="call btnCom">联系客服</view>
     <view class="cancelOrder btnCom" bindtap="cancelOrder">取消订单</view>
+    <view wx:if="" class="affirm btnCom" bindtap="cancelOrder">确认打包</view>
+    <view wx:if="" class="affirm btnCom" bindtap="cancelOrder">支付选项</view>
+</view>
+<view class="blocks" wx:else>
+    <view class="perch">
+        <van-button block>联系客服</van-button>
+    </view>
 </view>
