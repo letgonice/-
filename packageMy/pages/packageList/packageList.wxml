@@ -9,7 +9,13 @@
                 </view>
           </view>
 
-          <view class="packageMsgTable">
-          
+          <view class="packageMsgTable" style="box-sizing: border-box;padding: 20rpx;">
+            <van-steps
+              steps="{{ steps }}"
+              active="{{ active }}"
+              direction="vertical"
+              active-color="#000000"
+              inactive-color="#000000"
+            />
           </view>
     </view>

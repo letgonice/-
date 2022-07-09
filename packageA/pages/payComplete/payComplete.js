@@ -31,7 +31,9 @@ onShow() {
       timer=setInterval(()=>{
         if(this.data.countDown==0){
           clearInterval(timer)
-          //跳转到订单页面
+          wx.switchTab({
+            url: '/pages/home/home',
+          })
           return
         }
         this.setData({
@@ -43,6 +45,11 @@ onShow() {
   /**
    * 生命周期函数--监听页面隐藏
    */
+  tohome(){
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
+  },
   onHide() {
 
   },

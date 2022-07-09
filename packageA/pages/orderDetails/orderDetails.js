@@ -5,6 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+      parcelList:[
+        {id:1,type:"普通货物",bulk:'12*5*5CM',strong:"1.25KG",computedModul:"实际重量",cost:125},
+        {id:2,type:"普通货物",bulk:'12*5*5CM',strong:"2.25KG",computedModul:"实际重量",cost:175},
+        {id:3,type:"普通货物",bulk:'12*5*5CM',strong:"3.25KG",computedModul:"实际重量",cost:225},
+      ],
       address:[
         {id:1,name:"新希望仓库",number:"15017812311",address:'深圳市龙华区龙华街道工业路壹城环智中心C座2607室',img:'../../../assets/image/icon/地址.png',bgc:'#40b850',copyText:'复制'},
         {id:2,name:"KK Chen",number:"15017812311",address:'MEGASYSTEMS INC 799 E DRAGRAM SUITE 5A TUCSON, AZ 85705 USA',img:'../../../assets/image/icon/国外地址.png',
@@ -14,8 +19,10 @@ Page({
         orderCode:'20220509140712345678',
         path:"中国-美国",
         goodsType:"普通货物",
-        status:"待填写",
-        buyTime:"2022-05-09 14:07:12"
+        orderStatus:"待填写",
+        payStatus:"待支付",
+        buyTime:"2022-05-09 14:07:12",
+        haveStore:"2022-05-09 14:02:12",
       },
       expressArr:[],
       iptStatus:false
@@ -58,7 +65,7 @@ Page({
     let arr = []
     for(let i=1;i<=value ; i++){
       // false代表不禁用true代表已经确定订单号可以禁用了
-      arr=[...arr,{id:i,value:'',status:false}]
+      arr=[...arr,{id:i,value:'',status:0,iptDisaBled:false}]
     }
     if(arr.length>0){
         this.setData({
@@ -79,7 +86,9 @@ Page({
        return item.id ==id
      })
      orderCoderList[index].value=ordernum
-     orderCoderList[index].status=true
+ let randomStatus = Math.floor(Math.random()*3)
+     orderCoderList[index].iptDisaBled=true
+     orderCoderList[index].status=randomStatus
      let _this =this
     //  wx.showModal(Object object)
     wx.showModal({
@@ -138,6 +147,7 @@ Page({
   },
 
   onShow() {
+    // console.log();
     let expressArrStorg = wx.getStorageSync('expressArr')
         if(expressArrStorg.length>0){
           this.setData({
@@ -169,7 +179,7 @@ Page({
    //添加快递单号
    addOrder(){
      let _this =this
-     let obj ={id:Date.now(),value:'',status:false}
+     let obj ={id:Date.now(),value:'',status:0,iptDisaBled:false}
     wx.showModal({
       title:"是否增加快递单号",
       content:"增加快递单号后，发往转运中心的快递个数+1。是否要继续？",

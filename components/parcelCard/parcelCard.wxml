@@ -1,0 +1,14 @@
+<!--components/parcelCard/parcelCard.wxml-->
+<view class="parcelCard">
+      <view  class="parcelCardImg">
+          <image src="/assets/image/称重图片.png"></image>
+      </view>
+      <view class="parcelInfo">
+          <view class="first">包裹一</view>
+          <view>属性：{{parcelData.type}}</view>
+          <view>长宽高：{{parcelData.bulk}}</view>
+          <view>计费重量：{{parcelData.strong}}</view>
+          <view>计费方式：{{parcelData.computedModul}}</view>
+          <view>运费：￥{{parcelData.cost}}</view>
+      </view>
+</view>

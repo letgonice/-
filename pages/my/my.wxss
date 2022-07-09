@@ -52,7 +52,7 @@ color: white;
 
 .myBody .endCell{
     height: 602rpx;
-    margin-top: 28rpx;
+    margin: 28rpx 0;
 }
 .myBody .endCell .allContent{
   margin-top: 10rpx;

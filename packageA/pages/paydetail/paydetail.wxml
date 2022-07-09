@@ -18,27 +18,27 @@
           获取属性<text>普通货物</text>
       </view>
       <view class="variousItem">
-          转运费<text>￥138.00</text>
+          转运费<text>￥{{cost}}</text>
       </view>
       <view class="variousItem">
-          附加费<text>￥38.00</text>
+          附加费<text>￥{{extra}}</text>
       </view>
       <view class="variousItem">
-          丢失险<text>￥{{insurance.loseRisk}}</text>
+          丢失险<text>￥{{insurance.loseRisk?insurance.loseRisk:0}}</text>
       </view>
       <view class="variousItem">
-          关税险<text>￥{{insurance.tariffRisk}}</text>
+          关税险<text>￥{{insurance.tariffRisk?insurance.tariffRisk:0}}</text>
       </view>
-      <view class="variousItem youhjuan">
-         <view class="leftYouHui">
+      <navigator class="variousItem youhjuan" bindtap="sleCoupon">
+         <view class="leftYouHui" >
           <image src="../../../assets/image/icon/优惠券.png"></image>
           优惠券
          </view>
-         <view class="rightYh">
-            <view style="color: red;">-￥28.00 </view>
+         <view  class="rightYh">
+            <view style="color: red;">-￥{{couponCost}} </view>
             <image src="../../../assets/image/icon/rightblack.png" style=" width: 36rpx; height: 36rpx;"></image>
           </view>
-      </view>
+      </navigator>
         <view class="selectcoupon">
               <view class="warning">
                   <image src="../../../assets/image/icon/warn.png"></image>
@@ -48,9 +48,9 @@
         <view class="case">
               <view>
                 <text>已优惠</text>
-                <text class="reduce">￥8</text>
+                <text class="reduce">￥{{couponCost}}</text>
                 <text>小计</text>
-                <text class="jiesuan">￥28.00</text>
+                <text class="jiesuan">￥{{realityCost}}</text>
               </view>
         </view>
   </view>
@@ -59,13 +59,13 @@
   <view class="payPrice">
       <view class="allPrice">
           <view class="price">
-              订单总金额：￥138.00
+              订单总金额：￥{{realityCost}}
           </view>
             <view class="pact">
                 <van-checkbox  value="{{ checked }}" bind:change="onChange">阅读并同意《电子运单契约条款》</van-checkbox>
             </view>
       </view>
-      <van-button disabled="{{payBtnDisabled}}" class="payBtn flex-c-c">
+      <van-button disabled="{{payBtnDisabled}}" bindtap="toPay" class="payBtn flex-c-c">
           立即支付
       </van-button>
   </view>
@@ -96,5 +96,18 @@
             {{consentText}}
         </button>
 </van-popup>
-
 </view>
+
+<van-popup show="{{ selectCoupon }}" position="bottom"round="{{true}}"
+  z-index="{{99999}}" custom-style="height: 60%"
+bind:close="onClose">
+      <view class="selectCouponBox">
+            <view class="selectCoupon">选择优惠券
+              <van-icon name="cross" class="quitselectCoupon" bindtap="quitselectCoupon" />
+            </view>
+            <van-cell-group inset>
+              <van-cell title="单元格" value="内容" />
+              <van-cell title="单元格" value="内容" label="描述信息" />
+            </van-cell-group>
+      </view>
+</van-popup>

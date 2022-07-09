@@ -1,0 +1,4 @@
+<!--packageMy/pages/selectCoupon/selectCoupon.wxml-->
+<view wx:for="{{couponList}}" wx:key="id">
+      <couponCard couponItem="{{item}}"></couponCard>
+</view>

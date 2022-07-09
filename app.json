@@ -3,8 +3,8 @@
     "pages/home/home",
     "pages/coupon/coupon",
     "pages/order/order",
-    "pages/my/my"
-  ],
+    "pages/my/my" 
+   ],
   "subPackages": [
     {
       "root":"packageA",
@@ -15,7 +15,8 @@
         "pages/orderDetails/orderDetails",
         "pages/paydetail/paydetail",
         "pages/supportval/supportval",
-        "pages/payComplete/payComplete"
+        "pages/payComplete/payComplete",
+        "pages/search/search"
       ]
     },
     {
@@ -55,7 +56,11 @@
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "van-radio": "@vant/weapp/radio/index",
-    "van-radio-group": "@vant/weapp/radio-group/index"
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-index-bar": "@vant/weapp/index-bar/index",
+    "van-index-anchor": "@vant/weapp/index-anchor/index",
+    "van-search": "@vant/weapp/search/index",
+      "van-steps": "@vant/weapp/steps/index"
   },
   "tabBar": {
     "selectedColor": "#4c168e",

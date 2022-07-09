@@ -1,0 +1,16 @@
+<!--packageA/pages/search/search.wxml-->
+<view id="country">
+  <view class="nav-search">
+    <van-icon name="search" />
+    <input type="text" bindinput="inputValueChange" value="{{inputValue}}" placeholder="选择国家或地区" />
+  </view>
+
+  <!-- 列表 -->
+  <van-index-bar>
+  <view wx:for="{{searchList}}" wx:key="index">
+    <van-index-anchor index="{{index}}" />
+    <van-cell wx:for="{{item}}" wx:key="index" title="{{item.label}}" value="{{item.value}}" bindtap="tohome" data-item="{{item}}" />
+  </view>
+
+</van-index-bar>
+</view>

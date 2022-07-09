@@ -9,20 +9,6 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/warehouse/warehouse",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageA/pages/cost/cost",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
           "pathName": "pages/home/home",
           "query": "",
           "launchMode": "default",
@@ -51,41 +37,6 @@
         },
         {
           "name": "",
-          "pathName": "packageA/pages/paydetail/paydetail",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageMy/pages/myaddress/myaddress",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageMy/pages/addAddress/addAddress",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageA/pages/writeaddress/writeaddress",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageA/pages/supportval/supportval",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
           "pathName": "packageA/pages/warehouse/warehouse",
           "query": "",
           "launchMode": "default",
@@ -94,20 +45,6 @@
         {
           "name": "",
           "pathName": "pages/coupon/coupon",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageMy/pages/coupondetail/coupondetail",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageMy/pages/myaddress/myaddress",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -135,42 +72,7 @@
         },
         {
           "name": "",
-          "pathName": "packageA/pages/warehouse/warehouse",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageMy/pages/notice/notice",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageMy/pages/coupondetail/coupondetail",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageA/pages/writeaddress/writeaddress",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
           "pathName": "packageA/pages/cost/cost",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageA/pages/writeaddress/writeaddress",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -198,49 +100,7 @@
         },
         {
           "name": "",
-          "pathName": "packageMy/pages/mycoupon/mycoupon",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageMy/pages/packageList/packageList",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/order/order",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageA/pages/supportval/supportval",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageA/pages/writeaddress/writeaddress",
-          "query": "name=%E6%99%AE%E9%80%9A%E8%B4%A7%E7%89%A9",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
           "pathName": "packageMy/pages/myaddress/myaddress",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/order/order",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -262,13 +122,6 @@
         {
           "name": "",
           "pathName": "packageA/pages/writeaddress/writeaddress",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "packageA/pages/orderDetails/orderDetails",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -303,14 +156,28 @@
         },
         {
           "name": "",
-          "pathName": "packageA/pages/orderDetails/orderDetails",
+          "pathName": "pages/order/order",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pages/order/order",
+          "pathName": "packageA/pages/search/search",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "packageMy/pages/packageList/packageList",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "packageA/pages/search/search",
           "query": "",
           "launchMode": "default",
           "scene": null

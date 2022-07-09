@@ -1,15 +1,14 @@
-// components/couponCard/couponCard.js
+// components/parcelCard/parcelCard.js
 Component({
   /**
    * 组件的属性列表
    */
-  options:{
+  properties: {
+      parcelData:Object
+  },
+  options: {
     styleIsolation: 'shared'
   },
-  properties: {
-    couponItem:Object
-  },
-
   /**
    * 组件的初始数据
    */

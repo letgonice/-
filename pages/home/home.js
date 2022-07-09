@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    nation:'美国',
     popup:{
       show:false,
       btnList:['普通货物','电子产品','液体粉末','内地EMS','广东EMS'],
@@ -47,21 +48,28 @@ Page({
   },
 
   onLoad(options) {
-
+  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    let nation = wx.getStorageSync('nation')
+    this.setData({
+      nation:nation.label
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    let nation = wx.getStorageSync('nation')
+    this.setData({
+      nation:nation.label,
+      'popup.show':false
+    })
   },
 
   /**

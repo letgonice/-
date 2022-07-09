@@ -4,7 +4,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    orderNum:Object
   },
   options: {
     styleIsolation: 'shared'
@@ -20,6 +20,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    copyOrderNumber(e){
+      this.triggerEvent('copyOrderNum',this.data.orderNum.orderNumber)
+    },
+    orderDetail(e){
+      this.triggerEvent('orderDetHan',this.data.orderNum)
+    },
+    tobaojia(e){
+      this.triggerEvent('topay',this.data.orderNum)
+    }
   }
 })

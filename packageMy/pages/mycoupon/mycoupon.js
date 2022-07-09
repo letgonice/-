@@ -7,9 +7,9 @@ Page({
   data: {
     couponLIstanbul:[
       //discount 0代表元1代表折 status 0未使用 1已使用 2已过期
-      {id:1,meet:100,discountStatus:0,data:'2020.10.10-2020.11.11', discount:15, status:0},
-      {id:2,meet:100,discountStatus:1,data:'2020.10.10-2020.11.11', discount:15,status:1},
-      {id:3,meet:100,discountStatus:2,data:'2020.10.10-2020.11.11', discount:15,status:2}
+      {id:1,meet:100,discountStatus:0,startTime:'2020.10.10',  overTime:'2020.11.11',  discount:15, status:0},
+      {id:2,meet:100,discountStatus:1,startTime:'2020.10.10',  overTime:'2020.11.11',  discount:15,status:1},
+      {id:3,meet:100,discountStatus:2,startTime:'2020.10.10',  overTime:'2020.11.11',  discount:15,status:2}
     ],
     shadeShow:false,
     iptValue:''
@@ -68,7 +68,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
   },
 
   /**

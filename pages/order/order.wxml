@@ -2,11 +2,19 @@
 <view class="orderPage">
   <van-tabs active="{{ active }}" bind:change="onChange">
   <van-tab title="全部">
-      <orderCard></orderCard>
+  <view wx:for="{{orderList}}" wx:key="id">
+      <orderCard bindcopyOrderNum="copyNum" bindtopay="tosupport" bindorderDetHan="orderDetail" orderNum="{{item}}"></orderCard>
+  </view>
   </van-tab>
-  <van-tab title="待支付">内容 2</van-tab>
-  <van-tab title="已支付">内容 3</van-tab>
-  <van-tab title="已完成">内容 4</van-tab>
+  <van-tab title="待支付">
+    <view wx:for="{{awaitList}}" wx:key="id">
+        <orderCard  orderNum="{{item}}"></orderCard>
+  </view>
+  </van-tab>
+  <van-tab title="已支付"><orderCard></orderCard></van-tab>
+  <van-tab title="已完成">  <view wx:for="{{awaitList}}" wx:key="id">
+        <orderCard  orderNum="{{item}}"></orderCard>
+  </view></van-tab>
 </van-tabs>
 
 </view>
